@@ -1,14 +1,158 @@
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
-@import "./base/base";
-@import "./base/typography";
-@import "./components/buttons";
-@import "./layouts/header";
-@import "./layouts/footer";
-@import "./layouts/container";
-@import "./layouts/form";
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Shrikhand";
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-family: "Shrikhand";
+  color: #000000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: "Shrikhand";
+  color: #000000;
+  font-size: 1rem;
+}
+
+.restaurant_availability_btn {
+  display: inline-block;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  background-color: #FF79DA;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0.5rem 0.5rem 10rem #000000;
+}
+
+header {
+  position: relative;
+  width: auto;
+  padding: 1rem;
+  background-color: #FFFFFF;
+}
+header .header_image_logo {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+footer {
+  position: relative;
+  width: auto;
+  padding: 1rem;
+  background-color: #353535;
+}
+footer .footer_logo_text {
+  font-family: "Shrikhand", "cursive";
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+footer .footer_link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.restaurants {
+  width: auto;
+  padding: 1rem;
+  background-color: #e5e4e2;
+}
+.restaurants .restaurants_cards {
+  width: 100%;
+}
+.restaurants .restaurant_card {
+  position: relative;
+  border-style: none;
+  border-radius: 1rem;
+}
+.restaurants .restaurant_card_image {
+  width: 100%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-style: none;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.restaurants .restaurant_card_description {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
+  border-style: none;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #FFFFFF;
+}
+
+.restaurant_location {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #dcdcdc;
+}
+.restaurant_location .restaurant_location_icon {
+  display: inline-block;
+  margin-right: 10rem;
+}
+.restaurant_location .restaurant_location_text {
+  font-weight: bold;
+}
+
+.restaurant_availability {
+  padding: 1rem;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+.restaurant_availability .restaurant_availability_title {
+  margin-bottom: 1rem;
+}
+.restaurant_availability .restaurant_availability_text {
+  margin-bottom: 1rem;
+}
+
+.site_tutorial {
+  padding: 1rem;
+  background-color: #FFFFFF;
+}
+.site_tutorial .site_tutorial_title {
+  margin-bottom: 1rem;
+}
+.site_tutorial .site_tutorial_steps {
+  margin-bottom: 1rem;
+}
+.site_tutorial .site_tutorial_steps_item {
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,16 @@
+ .restaurant_location {
+    position: relative;
+    display: flex;
+    justify-content: center;    
+    padding: 1rem;
+    background-color: $background-colour-gainsboro;
+
+    .restaurant_location_icon {
+        display: inline-block;
+        margin-right: 10rem;
+    }
+
+    .restaurant_location_text {
+        font-weight: bold;
+    }
+}

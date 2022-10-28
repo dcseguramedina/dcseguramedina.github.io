@@ -1,0 +1,37 @@
+.restaurants {
+    width: auto;
+    padding: 1rem;
+    background-color: $background-colour-platinum;
+    
+    .restaurants_cards {       
+        width: 100%;           
+    }
+
+        .restaurant_card {
+            position: relative;                    
+            border-style: none;
+            border-radius: 1rem;
+        }    
+        
+            .restaurant_card_image {
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                border-style: none;
+                border-radius: 1rem;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .restaurant_card_description {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 30%;
+                border-style: none;
+                border-radius: 1rem;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                background-color: $background-colour-white;
+            }            
+}

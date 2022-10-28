@@ -1,0 +1,14 @@
+.restaurant_availability_btn {
+    display: inline-block;  
+    margin: auto;
+    padding: 1rem 1.5rem;
+    background-color: $colour-secondary;
+    border: none;
+    border-radius: 10rem;
+    font-size: 1.5rem;
+    font-weight: bold;       
+    color: $bnt-text-colour;        
+    cursor: pointer;  
+
+    @include btn-shadow;  
+}

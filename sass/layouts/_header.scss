@@ -1,9 +1,13 @@
 header {
-width: auto;
-height: 10%;
-background-color: $background-colour-white;
+    position: relative;
+    width: auto;
+    padding: 1rem;
+    background-color: $background-colour-white;
+
+    .header_image_logo {
+        width: 50%;
+        height: auto;
+        margin: auto;
+    }
 }
 
-.header_image {
-margin: auto;
-}
