@@ -1,14 +1,30 @@
-.restaurant_availability_btn {
-    display: inline-block;  
+.select_btn {
     margin: auto;
     padding: 1rem 1.5rem;
-    background-color: $colour-secondary;
+    background-color: $colour-primary;
     border: none;
     border-radius: 10rem;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: bold;       
-    color: $bnt-text-colour;        
+    color: $font-text-colour-white;        
     cursor: pointer;  
 
-    @include btn-shadow;  
+    @include shadow;  
 }
+
+.item_btn {
+    width: 95%;
+    height: 4.5rem;
+    margin-bottom: 1.6rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: $background-colour-white;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: bold;       
+    color: $font-text-colour-black;        
+    cursor: pointer;  
+
+    @include shadow; 
+} 

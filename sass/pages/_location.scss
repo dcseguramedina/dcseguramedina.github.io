@@ -1,16 +1,18 @@
- .restaurant_location {
-    position: relative;
-    display: flex;
-    justify-content: center;    
+ .restaurant_location {    
+    width: auto;
+    height: 2.8rem;
     padding: 1rem;
     background-color: $background-colour-gainsboro;
-
-    .restaurant_location_icon {
-        display: inline-block;
-        margin-right: 10rem;
-    }
+    text-align: center;
 
     .restaurant_location_text {
+        font-family: Roboto;
+        font-size: 1rem;
         font-weight: bold;
+    }
+
+    #restaurant_location_icon {        
+        padding: 0.1rem 1rem;
+        font-size: 1.1rem;
     }
 }

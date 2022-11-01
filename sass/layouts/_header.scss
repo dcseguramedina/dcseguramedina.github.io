@@ -1,13 +1,24 @@
 header {
     position: relative;
     width: auto;
+    height: 4.25rem;
     padding: 1rem;
     background-color: $background-colour-white;
 
-    .header_image_logo {
-        width: 50%;
-        height: auto;
-        margin: auto;
-    }
+    .header_image {
+        position: absolute; 
+        top: 1.5rem; 
+        left: 7rem;
+        width: 45%;
+    }        
+}
+
+.header_link {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.3rem;
+    color: $font-text-colour-black;
+    text-decoration: none;   
 }
 

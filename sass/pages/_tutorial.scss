@@ -1,21 +1,34 @@
 .site_tutorial {
-    padding: 1rem;
+    width: auto;
+    height: 28.5rem;
+    padding: 3rem 2rem;
     background-color: $background-colour-white;
 
     .site_tutorial_title {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .site_tutorial_steps {
-        margin-bottom: 1rem;
+        position: relative;
+        width: auto;
+        height: 80%;  
     }
 
-    .site_tutorial_steps_item {
-        border: none;
-        border-radius: 5rem;
-        font-size: 1.5rem;
-        font-weight: bold;       
-        color: $font-text-colour; 
-    } 
+    #site_tutorial_steps_icon {
+        position: absolute;
+        left: 2rem;
+        margin-right: 1.5rem;
+        color: #808080;
+    }
 
+    .site_tutorial_steps_number {
+        position: absolute;
+        left: -0.5rem;
+        padding: 0.1rem 0.5rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: $colour-primary;
+        font-size: 1rem;
+        color: $font-text-colour-white;     
+    }
 }

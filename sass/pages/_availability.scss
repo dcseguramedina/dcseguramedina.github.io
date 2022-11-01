@@ -1,14 +1,19 @@
 .restaurant_availability {
+    width: auto;
+    height: 19.35rem;
     padding: 1rem;
-    background-color: $background-colour-white;
+    background-color: $background-colour-platinum;
     text-align: center;
 
     .restaurant_availability_title {
-        margin-bottom: 1rem;
+        margin: 1.5rem 0 1rem;
     }
 
     .restaurant_availability_text {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        font-family: Roboto;
+        font-size: 1.25rem;
+        line-height: 1.2;        
     }
 
 }

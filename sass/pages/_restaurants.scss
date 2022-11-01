@@ -1,0 +1,22 @@
+.restaurants {
+    width: auto;
+    padding: 1rem;
+    background-color: $background-colour-platinum; 
+
+    .restaurants_title {
+        margin: 2rem 0;
+    }
+
+    .restaurants_cards {    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        height: 70rem;
+        margin: 2rem auto;
+    }
+}
+
+
+    
+    
