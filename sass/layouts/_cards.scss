@@ -36,30 +36,7 @@
 
         .restaurant_card_description_text {
             padding: 0.5rem 1rem;
-
-        }
-
-        #restaurant_card_description_icon1,
-        #restaurant_card_description_icon2,
-        #restaurant_card_description_icon3,
-        #restaurant_card_description_icon4 {
-            position: absolute;
-            top: 1rem;
-            right: 1.25rem;
-            background-color: $background-colour-white;
-            font-size: 1.5rem;
-            color: #666666;
-            overflow: hidden;
-        }
-
-        //    #restaurant_card_description_icon1:hover,
-        //    #restaurant_card_description_icon2:hover,
-        //    #restaurant_card_description_icon3:hover,
-        //    #restaurant_card_description_icon4:hover {
-        //      position: absolute;
-        //      color: transparent;         
-        //      background-image: linear-gradient(215deg, $colour-primary, $colour-secondary); 
-        //  }        
+        }      
     }
 }
 

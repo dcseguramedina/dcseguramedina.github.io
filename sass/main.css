@@ -7,6 +7,7 @@
 
 html, body {
   max-width: 576px;
+  min-width: 376px;
   font-family: "Shrikhand", Roboto;
   color: #000000;
   font-size: 16px;
@@ -14,37 +15,44 @@ html, body {
 }
 
 h1 {
-  font-family: Roboto;
+  font-family: "Shrikhand";
   color: #000000;
   font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-size: 1.75rem;
+  line-height: 1.5;
 }
 
 h2 {
   font-family: Roboto;
   color: #000000;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 h3 {
   font-family: Roboto;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: Roboto;
   color: #666666;
   font-weight: lighter;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 p {
   font-family: Roboto;
-  font-size: 1.25rem;
-  line-height: 1.2;
 }
 
-.select_btn {
-  margin: auto;
+.click_btn {
   padding: 1rem 1.5rem;
-  background-color: #9356DC;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
   border: none;
   border-radius: 10rem;
   font-size: 1.1rem;
@@ -54,61 +62,51 @@ p {
   box-shadow: 0.25rem 0.25rem 1rem #cccccc;
 }
 
+.click_btn--smaller {
+  width: 12rem;
+}
+
 .item_btn {
-  width: 95%;
-  height: 4.5rem;
-  margin-bottom: 1.6rem;
-  padding: 1rem 1.5rem;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 4.25rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 1rem;
   background-color: #FFFFFF;
-  text-align: center;
-  font-size: 1.15rem;
-  font-weight: bold;
-  color: #000000;
   cursor: pointer;
   box-shadow: 0.25rem 0.25rem 1rem #cccccc;
 }
 
 header {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: auto;
-  height: 4.25rem;
+  height: 3.5rem;
   padding: 1rem;
-  background-color: #FFFFFF;
+  background-color: #f6f6f6;
 }
 header .header_image {
-  position: absolute;
-  top: 1.5rem;
-  left: 7rem;
-  width: 45%;
+  width: 11rem;
+  height: 2rem;
 }
 
 .header_link {
   position: absolute;
   top: 1.5rem;
-  left: 1.5rem;
-  font-size: 1.3rem;
-  color: #000000;
+  left: 1.25rem;
   text-decoration: none;
 }
-
-main {
-  position: relative;
-  width: auto;
-  background-color: #FFFFFF;
-}
-
-.restaurant_image {
-  width: 100%;
-  height: 18rem;
-}
-.restaurant_image #restaurant_image {
-  width: 100%;
-  height: 100%;
+.header_link #header_link_icon {
+  font-size: 1.3rem;
+  color: #000000;
 }
 
 footer {
+  position: relative;
   width: auto;
   height: 12.5rem;
   padding: 1.5rem;
@@ -128,14 +126,6 @@ footer .footer_list_link {
   font-family: Roboto;
   color: #FFFFFF;
   text-decoration: none;
-}
-footer #footer_list_icon1 {
-  margin-right: 0.75rem;
-  font-size: 1rem;
-}
-footer #footer_list_icon2 {
-  margin-right: 0.75rem;
-  font-size: 0.7rem;
 }
 
 .restaurant_card {
@@ -175,18 +165,6 @@ footer #footer_list_icon2 {
 .restaurant_card .restaurant_card_description .restaurant_card_description_text {
   padding: 0.5rem 1rem;
 }
-.restaurant_card .restaurant_card_description #restaurant_card_description_icon1,
-.restaurant_card .restaurant_card_description #restaurant_card_description_icon2,
-.restaurant_card .restaurant_card_description #restaurant_card_description_icon3,
-.restaurant_card .restaurant_card_description #restaurant_card_description_icon4 {
-  position: absolute;
-  top: 1rem;
-  right: 1.25rem;
-  background-color: #FFFFFF;
-  font-size: 1.5rem;
-  color: #666666;
-  overflow: hidden;
-}
 
 .restaurant_card_new {
   position: absolute;
@@ -202,7 +180,130 @@ footer #footer_list_icon2 {
   color: #228a70;
 }
 
+.main_menu {
+  position: relative;
+  width: auto;
+  height: 88rem;
+  background-color: #f6f6f6;
+}
+
+.restaurant_image {
+  width: 100%;
+  height: 18rem;
+}
+.restaurant_image #restaurant_image {
+  width: 100%;
+  height: 100%;
+}
+
+.restaurant_menu {
+  position: absolute;
+  top: 14.5rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.restaurant_menu .restaurant_title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0 1.75rem;
+  padding-top: 0.5rem;
+}
+.restaurant_menu .restaurant_menu_list {
+  width: 100%;
+  margin-bottom: 2.75rem;
+}
+.restaurant_menu .restaurant_menu_list .restaurant_menu_list_title {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #666666;
+  text-transform: uppercase;
+  text-align: left;
+}
+.restaurant_menu .restaurant_menu_list .restaurant_menu_list_title::after {
+  display: block;
+  content: "";
+  width: 2.75rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
+}
+.restaurant_menu .restaurant_menu_list .restaurant_menu_list_title--offbeat {
+  padding-left: 2rem;
+}
+
+.restaurant_menu_item {
+  text-align: left;
+}
+.restaurant_menu_item .restaurant_menu_item h3,
+.restaurant_menu_item .restaurant_menu_item h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.restaurant_menu_price {
+  position: absolute;
+  right: 4rem;
+  bottom: 0;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.restaurant_menu_check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3.75rem;
+  height: 100%;
+  padding: 1.5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #99E2D0;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background-color: #FFFFFF;
+  font-size: 1.5rem;
+  color: #666666;
+}
+
+.fa-heart--backgrownd-color-white {
+  background-color: #f6f6f6;
+}
+
+.fa-circle-check {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+}
+
+.fa-utensils {
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
+
+.fa-handshake-angle {
+  margin-right: 0.75rem;
+  font-size: 0.7rem;
+}
+
+main {
+  width: auto;
+  background-color: #f6f6f6;
+}
+
 .restaurant_location {
+  display: flex;
+  justify-content: center;
   width: auto;
   height: 2.8rem;
   padding: 1rem;
@@ -223,7 +324,7 @@ footer #footer_list_icon2 {
   width: auto;
   height: 19.35rem;
   padding: 1rem;
-  background-color: #fcfbf8;
+  background-color: #f6f6f6;
   text-align: center;
 }
 .restaurant_availability .restaurant_availability_title {
@@ -250,14 +351,9 @@ footer #footer_list_icon2 {
   width: auto;
   height: 80%;
 }
-.site_tutorial #site_tutorial_steps_icon {
-  position: absolute;
-  left: 2rem;
-  margin-right: 1.5rem;
-  color: #808080;
-}
 .site_tutorial .site_tutorial_steps_number {
   position: absolute;
+  top: 1.5rem;
   left: -0.5rem;
   padding: 0.1rem 0.5rem;
   border: none;
@@ -266,11 +362,27 @@ footer #footer_list_icon2 {
   font-size: 1rem;
   color: #FFFFFF;
 }
+.site_tutorial #site_tutorial_steps_icon1,
+.site_tutorial #site_tutorial_steps_icon2,
+.site_tutorial #site_tutorial_steps_icon3 {
+  position: absolute;
+  top: 1.6rem;
+  left: 2.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.25rem;
+  color: #808080;
+}
+.site_tutorial .site_tutorial_steps_text {
+  margin-left: 3.5rem;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 
 .restaurants {
   width: auto;
   padding: 1rem;
-  background-color: #fcfbf8;
+  background-color: #f6f6f6;
 }
 .restaurants .restaurants_title {
   margin: 2rem 0;

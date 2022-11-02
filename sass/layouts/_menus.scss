@@ -1,0 +1,96 @@
+.main_menu {
+    position: relative;
+    width: auto;
+    height: 88rem;
+    background-color: $background-colour-very-light-gray;        
+}
+
+
+.restaurant_image {
+    width: 100%;
+    height: 18rem;
+
+    #restaurant_image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.restaurant_menu {
+    position: absolute;
+    top: 14.5rem;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: $background-colour-very-light-gray; 
+    text-align: center;
+
+    .restaurant_title {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: 0.75rem 0 1.75rem;
+        padding-top: 0.5rem;
+    }
+
+    .restaurant_menu_list {
+       width: 100%;
+       margin-bottom: 2.75rem;
+
+       .restaurant_menu_list_title {
+        margin-bottom: 1rem;
+        font-size: 1rem;        
+        color: $font-text-colour-gray;
+        text-transform: uppercase;
+        text-align: left;   
+        }
+
+        .restaurant_menu_list_title::after {
+            display: block;
+            content: "";
+            width: 2.75rem;
+            height: 0.2rem;
+            background-color: $colour-tertiary;      
+        }
+
+        .restaurant_menu_list_title--offbeat {
+            padding-left: 2rem;
+        }
+    }
+}
+
+.restaurant_menu_item {
+    text-align: left;  
+
+    //This is not working
+    .restaurant_menu_item h3,
+    .restaurant_menu_item h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }    
+}
+
+.restaurant_menu_price {
+    position: absolute;
+    right: 4rem;
+    bottom: 0;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.restaurant_menu_check {
+    position: absolute; 
+    top: 0;
+    right: 0;  
+    width: 3.75rem;
+    height: 100%; 
+    padding: 1.5rem 1rem;   
+    border: none;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: $colour-tertiary;
+}

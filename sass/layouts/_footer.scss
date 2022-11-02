@@ -1,4 +1,5 @@
 footer {
+    position: relative;
     width: auto;
     height: 12.5rem;
     padding: 1.5rem;
@@ -14,22 +15,10 @@ footer {
 
     .footer_list {
         list-style: none;
-
     }
-
         .footer_list_link {
             font-family: Roboto;
             color: $font-text-colour-white;
             text-decoration: none;
         }
-
-    #footer_list_icon1 {
-        margin-right: 0.75rem ;
-        font-size: 1rem;
-    }
-
-    #footer_list_icon2 {
-        margin-right: 0.75rem ;
-        font-size: 0.70rem;
-    }
 }

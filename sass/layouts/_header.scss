@@ -1,24 +1,27 @@
-header {
+header {    
     position: relative;
+    display: flex;
+    justify-content: center;
     width: auto;
-    height: 4.25rem;
+    height: 3.5rem;
     padding: 1rem;
-    background-color: $background-colour-white;
+    background-color: $background-colour-very-light-gray;
 
     .header_image {
-        position: absolute; 
-        top: 1.5rem; 
-        left: 7rem;
-        width: 45%;
+        width: 11rem; 
+        height: 2rem;       
     }        
 }
 
 .header_link {
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    font-size: 1.3rem;
-    color: $font-text-colour-black;
+    position: absolute; 
+    top: 1.5rem;  
+    left: 1.25rem;
     text-decoration: none;   
+
+    #header_link_icon {
+        font-size: 1.3rem;
+        color: $font-text-colour-black; 
+    }
 }
 
