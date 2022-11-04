@@ -80,6 +80,15 @@ p {
   box-shadow: 0.25rem 0.25rem 1rem #cccccc;
 }
 
+.item_btn--bigger {
+  height: 4.75rem;
+  border-radius: 1.5rem;
+}
+
+.item_btn--background-colour {
+  background-color: #f2eafb;
+}
+
 header {
   position: relative;
   display: flex;
@@ -89,7 +98,7 @@ header {
   padding: 1rem;
   background-color: #f6f6f6;
 }
-header .header_image {
+header_image {
   width: 11rem;
   height: 2rem;
 }
@@ -100,7 +109,8 @@ header .header_image {
   left: 1.25rem;
   text-decoration: none;
 }
-.header_link #header_link_icon {
+
+.fa-arrow-left {
   font-size: 1.3rem;
   color: #000000;
 }
@@ -140,7 +150,7 @@ footer .footer_list_link {
   color: #000000;
   box-shadow: 0.25rem 0.25rem 1rem #cccccc;
 }
-.restaurant_card .restaurant_card_image {
+.restaurant_card_image {
   width: 100%;
   height: 11rem;
   -o-object-fit: cover;
@@ -150,7 +160,7 @@ footer .footer_list_link {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.restaurant_card .restaurant_card_description {
+.restaurant_card_description {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -162,8 +172,18 @@ footer .footer_list_link {
   border-top-right-radius: 0;
   background-color: #FFFFFF;
 }
-.restaurant_card .restaurant_card_description .restaurant_card_description_text {
+.restaurant_card_description_text {
   padding: 0.5rem 1rem;
+}
+.restaurant_card_description_icon .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.restaurant_card_description_icon .fa-solid:hover {
+  opacity: 1;
 }
 
 .restaurant_card_new {
@@ -185,6 +205,10 @@ footer .footer_list_link {
   width: auto;
   height: 88rem;
   background-color: #f6f6f6;
+}
+
+.main_menu--larger {
+  height: 93rem;
 }
 
 .restaurant_image {
@@ -219,22 +243,22 @@ footer .footer_list_link {
   width: 100%;
   margin-bottom: 2.75rem;
 }
-.restaurant_menu .restaurant_menu_list .restaurant_menu_list_title {
+.restaurant_menu .restaurant_menu_list_title {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #666666;
   text-transform: uppercase;
   text-align: left;
 }
-.restaurant_menu .restaurant_menu_list .restaurant_menu_list_title::after {
+.restaurant_menu .restaurant_menu_list_title--offbeat {
+  padding-left: 2rem;
+}
+.restaurant_menu .restaurant_menu_list_title::after {
   display: block;
   content: "";
   width: 2.75rem;
   height: 0.2rem;
   background-color: #99E2D0;
-}
-.restaurant_menu .restaurant_menu_list .restaurant_menu_list_title--offbeat {
-  padding-left: 2rem;
 }
 
 .restaurant_menu_item {
@@ -248,8 +272,8 @@ footer .footer_list_link {
 
 .restaurant_menu_price {
   position: absolute;
-  right: 4rem;
-  bottom: 0;
+  right: 0.75rem;
+  bottom: 0.25rem;
   padding: 0.5rem;
   font-weight: bold;
 }
@@ -266,8 +290,31 @@ footer .footer_list_link {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background-color: #99E2D0;
+  visibility: hidden;
 }
 
+.item_btn .item_btn--smaller {
+  -webkit-animation: appear 3s;
+          animation: appear 3s;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .fa-heart {
   position: absolute;
   top: 1rem;
@@ -310,12 +357,13 @@ main {
   background-color: #dcdcdc;
   text-align: center;
 }
-.restaurant_location .restaurant_location_text {
+.restaurant_location_text {
   font-family: Roboto;
   font-size: 1rem;
   font-weight: bold;
 }
-.restaurant_location #restaurant_location_icon {
+
+.fa-location-dot {
   padding: 0.1rem 1rem;
   font-size: 1.1rem;
 }
@@ -327,10 +375,10 @@ main {
   background-color: #f6f6f6;
   text-align: center;
 }
-.restaurant_availability .restaurant_availability_title {
+.restaurant_availability_title {
   margin: 1.5rem 0 1rem;
 }
-.restaurant_availability .restaurant_availability_text {
+.restaurant_availability_text {
   margin-bottom: 2rem;
   font-family: Roboto;
   font-size: 1.25rem;
@@ -343,15 +391,15 @@ main {
   padding: 3rem 2rem;
   background-color: #FFFFFF;
 }
-.site_tutorial .site_tutorial_title {
+.site_tutorial_title {
   margin-bottom: 2rem;
 }
-.site_tutorial .site_tutorial_steps {
+.site_tutorial_steps {
   position: relative;
   width: auto;
   height: 80%;
 }
-.site_tutorial .site_tutorial_steps_number {
+.site_tutorial_steps_number {
   position: absolute;
   top: 1.5rem;
   left: -0.5rem;
@@ -362,9 +410,16 @@ main {
   font-size: 1rem;
   color: #FFFFFF;
 }
-.site_tutorial #site_tutorial_steps_icon1,
-.site_tutorial #site_tutorial_steps_icon2,
-.site_tutorial #site_tutorial_steps_icon3 {
+.site_tutorial_steps_text {
+  margin-left: 3.5rem;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.fa-mobile-screen-button,
+.fa-list-ul,
+.fa-store {
   position: absolute;
   top: 1.6rem;
   left: 2.5rem;
@@ -372,11 +427,9 @@ main {
   font-size: 1.25rem;
   color: #808080;
 }
-.site_tutorial .site_tutorial_steps_text {
-  margin-left: 3.5rem;
-  padding: 0.75rem 0;
-  font-size: 1.1rem;
-  font-weight: bold;
+
+.fa-store--colour {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -384,10 +437,10 @@ main {
   padding: 1rem;
   background-color: #f6f6f6;
 }
-.restaurants .restaurants_title {
+.restaurants_title {
   margin: 2rem 0;
 }
-.restaurants .restaurants_cards {
+.restaurants_cards {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

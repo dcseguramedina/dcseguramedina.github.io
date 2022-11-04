@@ -5,20 +5,21 @@ footer {
     padding: 1.5rem;
     background-color: $background-colour-dark-gray;
 
-    .footer_logo_text {
-        font-family: 'Shrikhand',"cursive";
-        color: $font-text-colour-white; 
-        font-weight: bold;       
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
+        .footer_logo_text {
+            font-family: 'Shrikhand',"cursive";
+            color: $font-text-colour-white; 
+            font-weight: bold;       
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
 
-    .footer_list {
-        list-style: none;
-    }
-        .footer_list_link {
-            font-family: Roboto;
-            color: $font-text-colour-white;
-            text-decoration: none;
+        .footer_list {
+            list-style: none;
+        
+                &_link {
+                    font-family: Roboto;
+                    color: $font-text-colour-white;
+                    text-decoration: none;
+                }
         }
 }

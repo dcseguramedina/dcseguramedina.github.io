@@ -5,15 +5,14 @@
     background-color: $background-colour-very-light-gray;
     text-align: center;
 
-    .restaurant_availability_title {
-        margin: 1.5rem 0 1rem;
-    }
+        &_title {
+            margin: 1.5rem 0 1rem;
+        }
 
-    .restaurant_availability_text {
-        margin-bottom: 2rem;
-        font-family: Roboto;
-        font-size: 1.25rem;
-        line-height: 1.2;        
-    }
-
+        &_text {
+            margin-bottom: 2rem;
+            font-family: Roboto;
+            font-size: 1.25rem;
+            line-height: 1.2;        
+        }
 }

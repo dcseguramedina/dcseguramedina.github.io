@@ -12,33 +12,47 @@
     @include shadow;
 
 
-    .restaurant_card_image {
-        width: 100%;
-        height: 11rem;
-        object-fit: cover;
-        border-style: none;
-        border-radius: 1rem;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
+        &_image {
+            width: 100%;
+            height: 11rem;
+            object-fit: cover;
+            border-style: none;
+            border-radius: 1rem;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
 
-    .restaurant_card_description {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 4.5rem;
-        border-style: none;
-        border-radius: 1rem;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        background-color: $background-colour-white;
+        &_description {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 4.5rem;
+            border-style: none;
+            border-radius: 1rem;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            background-color: $background-colour-white;
 
-        .restaurant_card_description_text {
-            padding: 0.5rem 1rem;
-        }      
-    }
+                &_text {
+                    padding: 0.5rem 1rem;
+                } 
+                
+                &_icon .fa-solid {
+                    color: transparent;
+                    background-image: linear-gradient(to bottom, $colour-primary,$colour-secondary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                }
+                    
+                &_icon .fa-solid:hover {
+                    opacity: 1;
+                }
+        }
 }
+
+
 
 .restaurant_card_new {
     position: absolute;

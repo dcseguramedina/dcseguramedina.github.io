@@ -11,16 +11,25 @@
     <title>ohmyfood, accueil</title>
 </head>
 <body>
+
+    <!--A loading spinner will be necessary. It will have to appear for 1 to 3 seconds when you arrive on the home page, cover the entire screen, and use CSS animations-->
+    <!--<div class="loading_spinner">
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" />
+        </svg>
+    </div>-->
+
     <header>        
         <img class="header_image" src="./images/logo/ohmyfood.png" alt="logo_ohmyfood">
     </header>
 
     <main>
+        <!--Display of the location of restaurants. Eventually it will be possible to choose your location to find restaurants close to a certain place-->
         <section class="restaurant_location">            
-            <i id="restaurant_location_icon" class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-location-dot"></i>
             <p class="restaurant_location_text">Paris, Belleville</p>
         </section>
-    
+        <!--When hovering, the background color of the main buttons should lighten slightly. The drop shadow will also need to be more visible-->
         <section class="restaurant_availability">
             <h2 class="restaurant_availability_title">Réservez le menu qui vous convient</h2>
             <p class="restaurant_availability_text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
@@ -30,26 +39,28 @@
         <section class="site_tutorial">
             <h2 class="site_tutorial_title">Fonctionnement</h2>
             <div class="site_tutorial_steps">
-                <button class="item_btn" type="button">
+                <button class="item_btn item_btn--bigger" type="button">
                     <span class="site_tutorial_steps_number">1</span>
-                    <i id="site_tutorial_steps_icon1" class="fa-solid fa-mobile-screen-button"></i>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
                     <span class="site_tutorial_steps_text">Choisissez un restaurant</span> 
                 </button>
-                <button class="item_btn" type="button">
+                <button class="item_btn item_btn--bigger" type="button">
                     <span class="site_tutorial_steps_number">2</span>
-                    <i id="site_tutorial_steps_icon2" class="fa-solid fa-list-ul"></i>
+                    <i class="fa-solid fa-list-ul"></i>
                     <span class="site_tutorial_steps_text">Composez votre menu</span> 
                 </button>
-                <button class="item_btn" type="button">
+                <button class="item_btn item_btn--bigger item_btn--background-colour" type="button">
                     <span class="site_tutorial_steps_number">3</span>
-                    <i id="site_tutorial_steps_icon3" class="fa-solid fa-store"></i>
+                    <i class="fa-solid fa-store fa-store--colour"></i>
                     <span class="site_tutorial_steps_text">Dégustez au restaurant</span> 
                 </button>
             </div>
         </section>
-
+        
         <section class="restaurants">
             <h2 class="restaurants_title">Restaurants</h2>
+            <!--Click on the card, the user is redirected to the menu page-->
+            <!--Eventually, visitors will be able to save their favorite menus. For that, a "Like" heart-shaped button is present on the mockup. At the click, it will have to be fill gradually. For this first version, the effect may appear in the Hover over on desktop instead of click-->
             <div class="restaurants_cards">
                 <a class="restaurant_card" href="./menu_la_palette_du_goût.html">
                     <img class="restaurant_card_image" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
@@ -58,9 +69,10 @@
                         <div class="restaurant_card_description_text">
                             <h3>La palette du goût</h3>
                             <h4>Ménilmontant</h4>
-                        </div>
+                        </div>                        
                         <div class="restaurant_card_description_icon">
                             <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
                         </div>                        
                     </div>
                 </a>
@@ -74,6 +86,7 @@
                         </div>
                         <div class="restaurant_card_description_icon">
                             <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
                         </div>                        
                     </div>
                 </a>
@@ -86,6 +99,7 @@
                         </div>
                         <div class="restaurant_card_description_icon">
                             <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
                         </div>                        
                     </div>
                 </a>
@@ -98,13 +112,14 @@
                         </div>
                         <div class="restaurant_card_description_icon">
                             <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
                         </div>                        
                     </div>
                 </a>
             </div>
         </section>
     </main>
-
+    <!--When clicking on "Contact", a referral to an email address is made-->
     <footer>
         <div class="footer_logo">
             <p class="footer_logo_text">ohmyfood</p>

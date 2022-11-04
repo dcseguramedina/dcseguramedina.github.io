@@ -7,14 +7,14 @@
     background-color: $background-colour-gainsboro;
     text-align: center;
 
-    .restaurant_location_text {
-        font-family: Roboto;
-        font-size: 1rem;
-        font-weight: bold;
-    }
+        &_text {
+            font-family: Roboto;
+            font-size: 1rem;
+            font-weight: bold;
+        }        
+}
 
-    #restaurant_location_icon {        
-        padding: 0.1rem 1rem;
-        font-size: 1.1rem;
-    }
+.fa-location-dot {        
+    padding: 0.1rem 1rem;
+    font-size: 1.1rem;
 }

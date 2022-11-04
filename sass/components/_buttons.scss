@@ -30,3 +30,20 @@
 
     @include shadow; 
 } 
+
+.item_btn--bigger {
+    height: 4.75rem;
+    border-radius: 1.5rem;
+    background-color: $background-colour-white;
+    transition: background-color 3s;    
+}   
+
+//.item_btn--bigger:focus {
+//    background-color: lighten($colour-primary, 35);
+//}
+
+.item_btn--background-colour {
+    background-color: lighten($colour-primary, 35);
+}
+
+

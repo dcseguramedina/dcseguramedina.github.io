@@ -4,43 +4,48 @@
     padding: 3rem 2rem;
     background-color: $background-colour-white;
 
-    .site_tutorial_title {
-        margin-bottom: 2rem;
-    }
+        &_title {
+            margin-bottom: 2rem;
+        }
 
-    .site_tutorial_steps {
-        position: relative;
-        width: auto;
-        height: 80%;  
-    }
+        &_steps {
+            position: relative;
+            width: auto;
+            height: 80%; 
+            
+                &_number {
+                    position: absolute;
+                    top: 1.5rem;
+                    left: -0.5rem;
+                    padding: 0.1rem 0.5rem;
+                    border: none;
+                    border-radius: 1rem;
+                    background-color: $colour-primary;
+                    font-size: 1rem;
+                    color: $font-text-colour-white;     
+                }
 
-    .site_tutorial_steps_number {
-        position: absolute;
-        top: 1.5rem;
-        left: -0.5rem;
-        padding: 0.1rem 0.5rem;
-        border: none;
-        border-radius: 1rem;
-        background-color: $colour-primary;
-        font-size: 1rem;
-        color: $font-text-colour-white;     
-    }
-
-    #site_tutorial_steps_icon1,
-    #site_tutorial_steps_icon2,
-    #site_tutorial_steps_icon3 {
-        position: absolute;
-        top: 1.6rem;
-        left: 2.5rem;
-        margin-right: 1.5rem;
-        font-size: 1.25rem;
-        color: #808080;
-    }
-
-    .site_tutorial_steps_text {
-        margin-left: 3.5rem;
-        padding: 0.75rem 0;  
-        font-size: 1.1rem;  
-        font-weight: bold;
-    }
+                &_text {
+                    margin-left: 3.5rem;
+                    padding: 0.75rem 0;  
+                    font-size: 1.1rem;  
+                    font-weight: bold;
+                }
+        }        
 }
+
+.fa-mobile-screen-button,
+.fa-list-ul,
+.fa-store {
+    position: absolute;
+    top: 1.6rem;
+    left: 2.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.25rem;
+    color: #808080;
+}
+
+.fa-store--colour {
+    color: $colour-primary;
+}
+
