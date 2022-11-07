@@ -40,7 +40,7 @@
                 
                 &_icon .fa-solid {
                     color: transparent;
-                    background-image: linear-gradient(to bottom, $colour-primary,$colour-secondary);
+                    background-image: $background-image-gradient;
                     background-clip: text;
                     -webkit-background-clip: text;
                     opacity: 0;
@@ -65,5 +65,5 @@
     font-family: Roboto;
     font-size: 0.9rem;
     font-weight: bold;
-    color: $font-text-colour-green;
+    color: $font-text-colour-green; // add opacity
 }

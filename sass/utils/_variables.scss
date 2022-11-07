@@ -9,6 +9,9 @@ $background-colour-very-light-gray: #f6f6f6;
 $background-colour-gainsboro: #dcdcdc;
 $background-colour-dark-gray: #353535;
 
+$background-image-gradient: linear-gradient(to bottom, $colour-primary,$colour-secondary);
+$background-image-click-btn: linear-gradient(to top left, $colour-primary,$colour-secondary);
+
 //Text colours
 $font-text-colour-black: #000000;
 $font-text-colour-gray: #666666;

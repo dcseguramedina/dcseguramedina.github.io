@@ -1,6 +1,6 @@
 .click_btn {
     padding: 1rem 1.5rem;
-    background-image: linear-gradient(to top, $colour-primary,$colour-secondary);
+    background-image: $background-image-click-btn;
     border: none;
     border-radius: 10rem;
     font-size: 1.1rem;
@@ -8,12 +8,20 @@
     color: $font-text-colour-white;        
     cursor: pointer; 
 
-    @include shadow;  
+    @include shadow;      
 }
 
 .click_btn--smaller {
     width: 12rem;
 }
+
+.click_btn:hover
+.click_btn--smaller:hover {
+    opacity: 0.9;
+
+    @include dark-shadow;
+}
+
 
 
 .item_btn {

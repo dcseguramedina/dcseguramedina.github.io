@@ -1,5 +1,9 @@
 @mixin shadow {
-    box-shadow: 0.25rem 0.25rem 1rem #cccccc; 
+    box-shadow: 0.25rem 0.25rem 0.5rem #CCCCCC; 
+}
+
+@mixin dark-shadow {
+    box-shadow: 0.25rem 0.25rem 0.5rem #999999; 
 }
 
 @mixin flex-center($direction) {
