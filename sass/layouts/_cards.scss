@@ -44,6 +44,7 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     opacity: 0;
+                    transition: 500ms; 
                 }
                     
                 &_icon .fa-solid:hover {

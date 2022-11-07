@@ -1,4 +1,4 @@
-$anim-duration: 500ms;
+$anim-duration: 450ms;
 $num-bars:3;
 $anim-delay: ($anim-duration / $num-bars);
 
@@ -13,7 +13,7 @@ $anim-delay: ($anim-duration / $num-bars);
     background-color: $background-colour-gainsboro;
     opacity: 1;
     z-index: 1; 
-    animation: disappear 50ms ($anim-duration*6) forwards;
+    animation: disappear 50ms ($anim-duration*3) forwards;
 
 
         &_image {
