@@ -40,9 +40,19 @@
             padding-top: 0.5rem;
         }
 
+$anim-duration-menu: 2000ms;
+$num-bars-menu:3;
+$anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
+
         .restaurant_menu_list {
             width: 100%;
             margin-bottom: 2.75rem;
+            animation: appear $anim-duration-menu both;
+            @for $i from 1 through $num-bars-menu {
+                &--#{$i} {
+                    animation-delay: $anim-delay-menu * $i;
+                } 
+            }
 
                 &_title {
                     margin-bottom: 1rem;
@@ -67,15 +77,18 @@
         }
 }
 
-.restaurant_menu_item {
-    text-align: left;  
 
-        //This is not working
-        .restaurant_menu_item h3,
-        .restaurant_menu_item h4 {
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }    
+@keyframes appear {
+    0% {
+        transform: scale(0.0);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.restaurant_menu_item {
+    text-align: left;     
 }
 
 .restaurant_menu_price {
@@ -101,16 +114,4 @@
     visibility: hidden;
 }
 
-.item_btn .item_btn--smaller {
-    animation: appear 3s;
-}
-
-@keyframes appear {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 

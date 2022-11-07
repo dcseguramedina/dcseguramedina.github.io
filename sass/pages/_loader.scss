@@ -1,6 +1,6 @@
-$anim-duration: 450ms;
-$num-bars:3;
-$anim-delay: ($anim-duration / $num-bars);
+$anim-duration-load: 450ms;
+$num-bars-load:3;
+$anim-delay-load: ($anim-duration-load / $num-bars-load);
 
 
 .load {
@@ -13,7 +13,7 @@ $anim-delay: ($anim-duration / $num-bars);
     background-color: $background-colour-gainsboro;
     opacity: 1;
     z-index: 1; 
-    animation: disappear 50ms ($anim-duration*3) forwards;
+    animation: disappear 50ms ($anim-duration-load*3) forwards;
 
 
         &_image {
@@ -46,10 +46,10 @@ $anim-delay: ($anim-duration / $num-bars);
     margin: 1rem;
     border-radius: 1rem;
     background-image: $background-image-gradient;
-    animation: ellipsis $anim-duration backwards infinite ease-in-out alternate;
-    @for $i from 1 through $num-bars {
+    animation: ellipsis $anim-duration-load backwards infinite ease-in-out alternate;
+    @for $i from 1 through $num-bars-load {
         &--#{$i} {
-            animation-delay: $anim-delay * $i;
+            animation-delay: $anim-delay-load * $i;
         } 
     }
 }
