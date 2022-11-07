@@ -15,14 +15,12 @@
     width: 12rem;
 }
 
-.click_btn:hover
+.click_btn:hover,
 .click_btn--smaller:hover {
     opacity: 0.9;
 
     @include dark-shadow;
 }
-
-
 
 .item_btn {
     position: relative;
@@ -44,11 +42,7 @@
     border-radius: 1.5rem;
     background-color: $background-colour-white;
     transition: background-color 3s;    
-}   
-
-//.item_btn--bigger:focus {
-//    background-color: lighten($colour-primary, 35);
-//}
+}
 
 .item_btn--background-colour {
     background-color: lighten($colour-primary, 35);
