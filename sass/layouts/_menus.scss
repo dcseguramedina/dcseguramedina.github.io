@@ -38,6 +38,19 @@
             justify-content: space-between;
             margin: 0.75rem 0 1.75rem;
             padding-top: 0.5rem;
+
+            & .fa-solid {
+                color: transparent;
+                background-image: $background-image-gradient;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: 500ms; 
+            }
+                
+            & .fa-solid:hover {
+                opacity: 1;
+            }
         }
 
 $anim-duration-menu: 2000ms;
@@ -89,6 +102,7 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
 
 .restaurant_menu_item { 
     text-align: left;  
+    //This is not working well
     text-overflow: ellipsis;
     overflow-x: hidden;  
 }
@@ -104,18 +118,6 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
     
 }
 
-.restaurant_menu_price:active {
-    transform: translateX(-3.75rem);
-}
-
-.restaurant_menu_price:active + .restaurant_menu_check {
-    right: 0;
-}
-
-.restaurant_menu_price:active + .restaurant_menu_check .fa-circle-check {
-    transform: rotate(360deg);
-}
-
 .restaurant_menu_check {
     position: absolute; 
     top: 0;
@@ -128,6 +130,7 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: $colour-tertiary;
+    transform: translateX(0rem);  
     transition: 500ms;  
     
     .fa-circle-check {  
@@ -135,6 +138,18 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
         font-size: 1.4rem;
         transition: 500ms;  
     }
+}
+
+.item_btn:active > .restaurant_menu_price {
+    transform: translateX(-3.75rem);
+}
+
+.item_btn:active > .restaurant_menu_check {
+    transform: translateX(-3.75rem);
+}
+
+.item_btn:active > .restaurant_menu_check .fa-circle-check {
+    transform: rotate(360deg);
 }
 
 

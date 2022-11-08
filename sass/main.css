@@ -249,6 +249,17 @@ footer .footer_list_link {
   margin: 0.75rem 0 1.75rem;
   padding-top: 0.5rem;
 }
+.restaurant_menu .restaurant_title .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 500ms;
+}
+.restaurant_menu .restaurant_title .fa-solid:hover {
+  opacity: 1;
+}
 .restaurant_menu .restaurant_menu_list {
   width: 100%;
   margin-bottom: 2.75rem;
@@ -318,18 +329,6 @@ footer .footer_list_link {
   transition: 500ms;
 }
 
-.restaurant_menu_price:active {
-  transform: translateX(-3.75rem);
-}
-
-.restaurant_menu_price:active + .restaurant_menu_check {
-  right: 0;
-}
-
-.restaurant_menu_price:active + .restaurant_menu_check .fa-circle-check {
-  transform: rotate(360deg);
-}
-
 .restaurant_menu_check {
   position: absolute;
   top: 0;
@@ -342,6 +341,7 @@ footer .footer_list_link {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background-color: #99E2D0;
+  transform: translateX(0rem);
   transition: 500ms;
 }
 .restaurant_menu_check .fa-circle-check {
@@ -350,17 +350,25 @@ footer .footer_list_link {
   transition: 500ms;
 }
 
+.item_btn:active > .restaurant_menu_price {
+  transform: translateX(-3.75rem);
+}
+
+.item_btn:active > .restaurant_menu_check {
+  transform: translateX(-3.75rem);
+}
+
+.item_btn:active > .restaurant_menu_check .fa-circle-check {
+  transform: rotate(360deg);
+}
+
 .fa-heart {
   position: absolute;
   top: 1rem;
   right: 1.25rem;
-  background-color: #FFFFFF;
+  background-color: transparent;
   font-size: 1.5rem;
   color: #666666;
-}
-
-.fa-heart--backgrownd-color-white {
-  background-color: #f6f6f6;
 }
 
 .fa-utensils {
