@@ -34,7 +34,7 @@ h3 {
   font-family: Roboto;
   color: #000000;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.2;
 }
 
@@ -83,6 +83,7 @@ p {
   border-radius: 1rem;
   background-color: #FFFFFF;
   cursor: pointer;
+  overflow: hidden;
   box-shadow: 0.25rem 0.25rem 0.5rem #CCCCCC;
 }
 
@@ -90,7 +91,7 @@ p {
   height: 4.75rem;
   border-radius: 1.5rem;
   background-color: #FFFFFF;
-  transition: background-color 3s;
+  overflow: visible;
 }
 
 .item_btn--background-colour {
@@ -303,6 +304,8 @@ footer .footer_list_link {
 }
 .restaurant_menu_item {
   text-align: left;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
 }
 
 .restaurant_menu_price {
@@ -312,6 +315,7 @@ footer .footer_list_link {
   padding: 0.5rem;
   font-weight: bold;
   transform: translateX(0rem);
+  transition: 500ms;
 }
 
 .restaurant_menu_price:active {
@@ -319,13 +323,17 @@ footer .footer_list_link {
 }
 
 .restaurant_menu_price:active + .restaurant_menu_check {
-  visibility: visible;
+  right: 0;
+}
+
+.restaurant_menu_price:active + .restaurant_menu_check .fa-circle-check {
+  transform: rotate(360deg);
 }
 
 .restaurant_menu_check {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -3.75rem;
   width: 3.75rem;
   height: 100%;
   padding: 1.5rem 1rem;
@@ -334,7 +342,12 @@ footer .footer_list_link {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background-color: #99E2D0;
-  visibility: hidden;
+  transition: 500ms;
+}
+.restaurant_menu_check .fa-circle-check {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  transition: 500ms;
 }
 
 .fa-heart {
@@ -348,11 +361,6 @@ footer .footer_list_link {
 
 .fa-heart--backgrownd-color-white {
   background-color: #f6f6f6;
-}
-
-.fa-circle-check {
-  color: #FFFFFF;
-  font-size: 1.4rem;
 }
 
 .fa-utensils {

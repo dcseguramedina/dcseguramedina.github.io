@@ -32,7 +32,8 @@
     border: none;
     border-radius: 1rem;
     background-color: $background-colour-white;           
-    cursor: pointer;      
+    cursor: pointer; 
+    overflow: hidden;     
 
     @include shadow; 
 } 
@@ -40,8 +41,8 @@
 .item_btn--bigger {
     height: 4.75rem;
     border-radius: 1.5rem;
-    background-color: $background-colour-white;
-    transition: background-color 3s;    
+    background-color: $background-colour-white;  
+    overflow: visible; 
 }
 
 .item_btn--background-colour {
