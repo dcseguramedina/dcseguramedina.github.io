@@ -311,6 +311,15 @@ footer .footer_list_link {
   bottom: 0.25rem;
   padding: 0.5rem;
   font-weight: bold;
+  transform: translateX(0rem);
+}
+
+.restaurant_menu_price:active {
+  transform: translateX(-3.75rem);
+}
+
+.restaurant_menu_price:active + .restaurant_menu_check {
+  visibility: visible;
 }
 
 .restaurant_menu_check {
