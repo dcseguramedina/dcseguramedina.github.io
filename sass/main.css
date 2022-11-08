@@ -94,8 +94,9 @@ p {
   overflow: visible;
 }
 
-.item_btn--background-colour {
+.item_btn--bigger:hover {
   background-color: #f2eafb;
+  box-shadow: 0.25rem 0.25rem 0.5rem #999999;
 }
 
 header {
@@ -466,7 +467,9 @@ main {
   color: #808080;
 }
 
-.fa-store--colour {
+.item_btn--bigger:hover > .fa-mobile-screen-button,
+.item_btn--bigger:hover > .fa-list-ul,
+.item_btn--bigger:hover > .fa-store {
   color: #9356DC;
 }
 

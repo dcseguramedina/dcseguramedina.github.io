@@ -45,7 +45,9 @@
     color: #808080;
 }
 
-.fa-store--colour {
+.item_btn--bigger:hover > .fa-mobile-screen-button,
+.item_btn--bigger:hover > .fa-list-ul,
+.item_btn--bigger:hover > .fa-store {
     color: $colour-primary;
 }
 

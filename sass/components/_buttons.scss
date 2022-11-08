@@ -45,8 +45,10 @@
     overflow: visible; 
 }
 
-.item_btn--background-colour {
+.item_btn--bigger:hover {
     background-color: lighten($colour-primary, 35);
+
+    @include dark-shadow;
 }
 
 
