@@ -149,9 +149,16 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
 }
 
 .item_btn:active > .restaurant_menu_check .fa-circle-check {
-    transform: rotate(360deg);
+    animation: rotate both;
 }
 
 
-
+@keyframes rotate {
+    0% {
+        transform: rotate(-275deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 

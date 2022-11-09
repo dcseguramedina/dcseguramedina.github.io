@@ -7,7 +7,9 @@ header {
     padding: 1rem;
     background-color: $background-colour-very-light-gray;
 
-        & image {
+    @include header-shadow;
+
+        .header_image {
             width: 11rem; 
             height: 2rem;       
         }        

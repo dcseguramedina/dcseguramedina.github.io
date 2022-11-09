@@ -10,7 +10,7 @@ $anim-delay-load: ($anim-duration-load / $num-bars-load);
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    background-color: $background-colour-gainsboro;
+    background-color: $background-colour-light-gray;
     opacity: 1;
     z-index: 1; 
     animation: disappear 50ms ($anim-duration-load*3) forwards;
@@ -31,13 +31,13 @@ $anim-delay-load: ($anim-duration-load / $num-bars-load);
 
 @keyframes disappear {
     0% {
-        opacity: 1;
+       opacity: 1;
         z-index: 1;
     }
     100% {
         opacity: 0;
         z-index: 0;
-    }
+   }
 }
 
 .load_form { 
@@ -46,7 +46,7 @@ $anim-delay-load: ($anim-duration-load / $num-bars-load);
     margin: 1rem;
     border-radius: 1rem;
     background-image: $background-image-gradient;
-    animation: ellipsis $anim-duration-load backwards infinite ease-in-out alternate;
+    animation: ellipsis $anim-duration-load infinite backwards ease-in-out alternate;
     @for $i from 1 through $num-bars-load {
         &--#{$i} {
             animation-delay: $anim-delay-load * $i;

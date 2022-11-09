@@ -106,9 +106,10 @@ header {
   width: auto;
   height: 3.5rem;
   padding: 1rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
+  box-shadow: 0 0 0.5rem #000000;
 }
-header image {
+header .header_image {
   width: 11rem;
   height: 2rem;
 }
@@ -215,7 +216,7 @@ footer .footer_list_link {
   position: relative;
   width: auto;
   height: 88rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 
 .main_menu--larger {
@@ -240,7 +241,7 @@ footer .footer_list_link {
   border-radius: 2rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   text-align: center;
 }
 .restaurant_menu .restaurant_title {
@@ -360,9 +361,27 @@ footer .footer_list_link {
 }
 
 .item_btn:active > .restaurant_menu_check .fa-circle-check {
-  transform: rotate(360deg);
+  -webkit-animation: rotate both;
+          animation: rotate both;
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(-275deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-275deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .fa-heart {
   position: absolute;
   top: 1rem;
@@ -383,18 +402,19 @@ footer .footer_list_link {
 }
 
 main {
+  position: relative;
   width: auto;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 
 .restaurant_location {
   display: flex;
   justify-content: center;
+  align-content: center;
   width: auto;
   height: 2.8rem;
   padding: 1rem;
-  background-color: #dcdcdc;
-  text-align: center;
+  background-color: #DFDFDF;
 }
 .restaurant_location_text {
   font-family: Roboto;
@@ -411,7 +431,7 @@ main {
   width: auto;
   height: 19.35rem;
   padding: 1rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   text-align: center;
 }
 .restaurant_availability_title {
@@ -476,7 +496,7 @@ main {
 .restaurants {
   width: auto;
   padding: 1rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 .restaurants_title {
   margin: 2rem 0;
@@ -497,7 +517,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #dcdcdc;
+  background-color: #DFDFDF;
   opacity: 1;
   z-index: 1;
   -webkit-animation: disappear 50ms 1350ms forwards;
@@ -541,8 +561,8 @@ main {
   margin: 1rem;
   border-radius: 1rem;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  -webkit-animation: ellipsis 450ms backwards infinite ease-in-out alternate;
-          animation: ellipsis 450ms backwards infinite ease-in-out alternate;
+  -webkit-animation: ellipsis 450ms infinite backwards ease-in-out alternate;
+          animation: ellipsis 450ms infinite backwards ease-in-out alternate;
 }
 .load_form--1 {
   -webkit-animation-delay: 150ms;

@@ -1,11 +1,11 @@
  .restaurant_location {    
     display: flex;
     justify-content: center;
+    align-content: center;
     width: auto;
     height: 2.8rem;
     padding: 1rem;
-    background-color: $background-colour-gainsboro;
-    text-align: center;
+    background-color: $background-colour-light-gray;
 
         &_text {
             font-family: Roboto;
