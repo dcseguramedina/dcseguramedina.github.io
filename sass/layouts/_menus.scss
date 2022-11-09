@@ -48,7 +48,7 @@
                 transition: 500ms; 
             }
                 
-            & .fa-solid:hover {
+            & .fa-solid:active {
                 opacity: 1;
             }
         }
@@ -102,7 +102,7 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
 
 .restaurant_menu_item { 
     text-align: left;  
-    //This is not working well
+    //This is not working
     text-overflow: ellipsis;
     overflow-x: hidden;  
 }
@@ -149,16 +149,5 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
 }
 
 .item_btn:active > .restaurant_menu_check .fa-circle-check {
-    animation: rotate both;
+    transform: rotate(360deg);
 }
-
-
-@keyframes rotate {
-    0% {
-        transform: rotate(-275deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-

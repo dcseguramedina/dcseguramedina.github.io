@@ -1,4 +1,4 @@
-.click_btn {
+.click_btn {    
     padding: 1rem 1.5rem;
     background-image: $background-image-click-btn;
     border: none;
@@ -39,7 +39,8 @@
 } 
 
 .item_btn--bigger {
-    height: 4.75rem;
+    height: 4.5rem;
+    margin-bottom: 1.75rem;
     border-radius: 1.5rem;
     background-color: $background-colour-white;  
     overflow: visible; 

@@ -1,8 +1,8 @@
 .restaurant_card {
     position: relative;
     width: auto;
-    height: 15rem;
-    margin-bottom: 2rem;
+    height: 16rem;
+    margin-bottom: 1.4rem;
     border-style: none;
     border-radius: 1rem;
     background-color: $background-colour-white;
@@ -47,7 +47,7 @@
                     transition: 500ms; 
                 }
                     
-                &_icon .fa-solid:hover {
+                &_icon .fa-solid:active {
                     opacity: 1;
                 }
         }

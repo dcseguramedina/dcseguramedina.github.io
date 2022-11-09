@@ -3,18 +3,20 @@
     justify-content: center;
     align-content: center;
     width: auto;
-    height: 2.8rem;
+    height: 3.3rem;
     padding: 1rem;
     background-color: $background-colour-light-gray;
 
         &_text {
+            padding-top: 0.25rem;
             font-family: Roboto;
             font-size: 1rem;
             font-weight: bold;
+            line-height: 1;
         }        
 }
 
 .fa-location-dot {        
-    padding: 0.1rem 1rem;
-    font-size: 1.1rem;
+    margin-right: 1.2rem;
+    font-size: 1rem;
 }
