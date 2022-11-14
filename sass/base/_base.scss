@@ -1,4 +1,4 @@
-/* Reset */
+// Reset CSS //
 
 * {
     box-sizing: border-box;
@@ -6,6 +6,7 @@
     padding: 0;   
     }
 
+// Main elements of the web site //
 html, body {
     max-width: 576px;
     min-width: 376px;
@@ -14,10 +15,7 @@ html, body {
     color: $font-text-colour-black; 
     font-size: 16px;
     line-height: 1.5; 
-    
-    @include tablete-only
 }
-
 
 h1 {
     font-family: 'Shrikhand';  

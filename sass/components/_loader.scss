@@ -1,26 +1,24 @@
-$anim-duration-load: 450ms;
-$num-bars-load:3;
-$anim-delay-load: ($anim-duration-load / $num-bars-load);
 
+// The loader appears for 3 seconds when you arrive on the home page //
+// It covers the entire screen and use CSS animations //
 
+// Loader backgrownd + animation //
 .load {
     position: fixed;
     inset: 0;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
+    z-index: 1;     
+    @include flex-center-direction (column);
     background-color: $background-colour-light-gray;
-    opacity: 1;
-    z-index: 1; 
+    opacity: 1;    
     animation: disappear 50ms ($anim-duration-load*3) forwards;
 
-
+        // Logo //
         &_image {
             width: 50%;
             margin: 1rem;
         }
 
+        // Three points - elipsis //
         &_forms {
             display: flex; 
             justify-content: center;
@@ -29,17 +27,7 @@ $anim-delay-load: ($anim-duration-load / $num-bars-load);
         }        
 }
 
-@keyframes disappear {
-    0% {
-       opacity: 1;
-        z-index: 1;
-    }
-    100% {
-        opacity: 0;
-        z-index: 0;
-   }
-}
-
+// Elipsis animation //
 .load_form { 
     width: 2rem;
     height: 2rem;
@@ -51,14 +39,5 @@ $anim-delay-load: ($anim-duration-load / $num-bars-load);
         &--#{$i} {
             animation-delay: $anim-delay-load * $i;
         } 
-    }
-}
-
-@keyframes ellipsis {
-    0% {
-        transform: scale(0.5);
-    }
-    100% {
-        transform: scale(1.0);
     }
 }

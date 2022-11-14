@@ -1,3 +1,4 @@
+// Menu container //
 .main_menu {
     position: relative;
     width: auto;
@@ -5,11 +6,12 @@
     background-color: $background-colour-very-light-gray;        
 }
 
+// The last restaurant has a larger menu so the container has been modified respectively //
 .main_menu--larger {
     height: 93rem;
 }
 
-
+// Backgrownd restaurant image //
 .restaurant_image {
     width: 100%;
     height: 18rem;
@@ -20,6 +22,7 @@
         }
 }
 
+// Restaurant menu //
 .restaurant_menu {
     position: absolute;
     top: 14.5rem;
@@ -30,76 +33,74 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background-color: $background-colour-very-light-gray; 
-    text-align: center;
+    text-align: center;    
+}
 
-        .restaurant_title {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            margin: 0.75rem 0 1.75rem;
-            padding-top: 0.5rem;
+//Restaurant title //
+.restaurant_title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 0 1.75rem;
+    padding-top: 0.5rem;
 
-            & .fa-solid {
-                color: transparent;
-                background-image: $background-image-gradient;
-                background-clip: text;
-                -webkit-background-clip: text;
-                opacity: 0;
-                transition: 500ms; 
-            }
-                
-            & .fa-solid:active {
-                opacity: 1;
-            }
-        }
+    // Icons - Like boutton //
+    & .fa-solid {
+        color: transparent;
+        background-image: $background-image-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: 500ms; 
+    }
 
-$anim-duration-menu: 2000ms;
-$num-bars-menu:3;
-$anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
+    //Like boutton effects on click //     
+    & .fa-solid:active {
+        opacity: 1;
+    }
+}
 
-        .restaurant_menu_list {
-            width: 100%;
-            margin-bottom: 2.75rem;
-            animation: appear $anim-duration-menu both;
-            @for $i from 1 through $num-bars-menu {
-                &--#{$i} {
-                    animation-delay: $anim-delay-menu * $i;
-                } 
-            }
+// Restaurant menu list + animations //
 
-                &_title {
-                    margin-bottom: 1rem;
-                    font-size: 1rem;        
-                    color: $font-text-colour-gray;
-                    text-transform: uppercase;
-                    text-align: left;  
-                    
-                        &--offbeat {
-                            padding-left: 2rem;
-                        }
+// Upon arrival on the menu pages, the dishes appears gradually with a slight time lag (by group) //
+// Restaurant menu list //
+.restaurant_menu_list {
+    width: 100%;
+    margin-bottom: 2.75rem;
+    animation: appear $anim-duration-menu both;
+    @for $i from 1 through $num-bars-menu {
+        &--#{$i} {
+            animation-delay: $anim-delay-menu * $i;
+        } 
+    }
+        // This title (h2) has been adapted in order to capitalize the text //
+        &_title {
+            margin-bottom: 1rem;
+            font-size: 1rem;        
+            color: $font-text-colour-gray;
+            text-transform: uppercase;
+            text-align: left;  
+
+                // In some menu pages, the 'dishes' title is slightly shifted to the right so the it has been modified respectively //
+                &--offbeat {
+                    padding-left: 2rem;
                 }
-
-                //Check how to use & with ::after
-                &_title::after {
-                    display: block;
-                    content: "";
-                    width: 2.75rem;
-                    height: 0.2rem;
-                    background-color: $colour-tertiary;      
-                }                
         }
+        
+        // A green short line is present under the title in all menu pages //
+        &_title::after {
+            display: block;
+            content: "";
+            width: 2.75rem;
+            height: 0.2rem;
+            background-color: $colour-tertiary;      
+        }                
 }
 
+// In order to add the dishes to the order by clicking on them, a small check mark appears on the right of the dish // 
+// This check mark slides from right to left. If the title of the dish is too long, it is trimmed with ellipsis points //
 
-@keyframes appear {
-    0% {
-        transform: scale(0.0);
-    }
-    100% {
-        transform: scale(1.0);
-    }
-}
-
+// Name of the dish //
 .restaurant_menu_item { 
     text-align: left;  
     //This is not working
@@ -107,6 +108,7 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
     overflow-x: hidden;  
 }
 
+// Price of the dish //
 .restaurant_menu_price {
     position: absolute;
     right: 0.75rem; 
@@ -114,10 +116,10 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
     padding: 0.5rem;  
     font-weight: bold; 
     transform: translateX(0rem);   
-    transition: 500ms;
-    
+    transition: 500ms;    
 }
 
+// Checkmark //
 .restaurant_menu_check {
     position: absolute; 
     top: 0;
@@ -131,15 +133,10 @@ $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
     border-bottom-left-radius: 0;
     background-color: $colour-tertiary;
     transform: translateX(0rem);  
-    transition: 500ms;  
-    
-    .fa-circle-check {  
-        color: $background-colour-white;
-        font-size: 1.4rem;
-        transition: 500ms;  
-    }
+    transition: 500ms;
 }
 
+// Checkmark effects on click //
 .item_btn:active > .restaurant_menu_price {
     transform: translateX(-3.75rem);
 }

@@ -1,3 +1,6 @@
+// On hover, the background color of the main buttons lights up slightly. The drop shadow is also more visible //
+
+// This base button is used on the availability section and the menu pages //
 .click_btn {    
     padding: 1rem 1.5rem;
     background-image: $background-image-click-btn;
@@ -7,21 +10,22 @@
     font-weight: bold;       
     color: $font-text-colour-white;        
     cursor: pointer; 
-
-    @include shadow;      
+    @include box-shadow;      
 }
 
+// The botton 'Commander' on the menu pages is smaller so it has been adapted respectively //
 .click_btn--smaller {
     width: 12rem;
 }
 
+// Button effecst on hover //
 .click_btn:hover,
 .click_btn--smaller:hover {
     opacity: 0.9;
-
-    @include dark-shadow;
+    @include dark-box-shadow;
 }
 
+// This base button is used on the tutorial section (home page) and the list menu on the menu pages //
 .item_btn {
     position: relative;
     display: flex;
@@ -33,11 +37,11 @@
     border-radius: 1rem;
     background-color: $background-colour-white;           
     cursor: pointer; 
-    overflow: hidden;     
-
-    @include shadow; 
+    overflow: hidden;   
+    @include box-shadow; 
 } 
 
+// The botton 'Explorer nos restaurants' on the tutorial section (home page) is bigger so it has been adapted respectively //
 .item_btn--bigger {
     height: 4.5rem;
     margin-bottom: 1.75rem;
@@ -46,10 +50,10 @@
     overflow: visible; 
 }
 
+// Button effecst on hover //
 .item_btn--bigger:hover {
     background-color: lighten($colour-primary, 35);
-
-    @include dark-shadow;
+    @include dark-box-shadow;
 }
 
 

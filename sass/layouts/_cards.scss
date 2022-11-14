@@ -1,3 +1,4 @@
+// Card container //
 .restaurant_card {
     position: relative;
     width: auto;
@@ -6,12 +7,11 @@
     border-style: none;
     border-radius: 1rem;
     background-color: $background-colour-white;
+    @include box-shadow;
     text-decoration: none;
-    color: $font-text-colour-black;
+    color: $font-text-colour-black;   
 
-    @include shadow;
-
-
+        // Restaurant image //
         &_image {
             width: 100%;
             height: 11rem;
@@ -22,6 +22,7 @@
             border-bottom-right-radius: 0;
         }
 
+        // Restaurant description //
         &_description {
             position: relative;
             display: flex;
@@ -38,6 +39,7 @@
                     padding: 0.5rem 1rem;
                 } 
                 
+                // Icons - Like boutton //
                 &_icon .fa-solid {
                     color: transparent;
                     background-image: $background-image-gradient;
@@ -46,15 +48,15 @@
                     opacity: 0;
                     transition: 500ms; 
                 }
-                    
+                
+                // Like boutton effects on click //
                 &_icon .fa-solid:active {
                     opacity: 1;
                 }
         }
 }
 
-
-
+// 'Nouveau' flag //
 .restaurant_card_new {
     position: absolute;
     top: 0.8rem;
@@ -66,5 +68,5 @@
     font-family: Roboto;
     font-size: 0.9rem;
     font-weight: bold;
-    color: $font-text-colour-green; // add opacity
+    color: darken($colour-tertiary, 35);
 }

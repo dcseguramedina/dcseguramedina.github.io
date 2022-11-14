@@ -1,4 +1,55 @@
-/* Reset */
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@-webkit-keyframes ellipsis {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ellipsis {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,12 +64,6 @@ html, body {
   color: #000000;
   font-size: 16px;
   line-height: 1.5;
-}
-@media screen and (max-width: 768px) {
-  html, body {
-    max-width: 768px;
-    min-width: 576px;
-  }
 }
 
 h1 {
@@ -55,6 +100,52 @@ h4 {
 
 p {
   font-family: Roboto;
+}
+
+.load {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #DFDFDF;
+  opacity: 1;
+  -webkit-animation: disappear 50ms 1350ms forwards;
+          animation: disappear 50ms 1350ms forwards;
+}
+.load_image {
+  width: 50%;
+  margin: 1rem;
+}
+.load_forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.load_form {
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-animation: ellipsis 450ms infinite backwards ease-in-out alternate;
+          animation: ellipsis 450ms infinite backwards ease-in-out alternate;
+}
+.load_form--1 {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+.load_form--2 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+.load_form--3 {
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
 }
 
 .click_btn {
@@ -109,15 +200,16 @@ p {
 
 header {
   position: relative;
-  display: flex;
-  justify-content: center;
   width: auto;
   height: 4rem;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #F6F6F6;
-  box-shadow: 0 0 0.5rem #000000;
 }
-header .header_image {
+
+.header_image {
   width: 11rem;
   height: 2rem;
 }
@@ -134,6 +226,12 @@ header .header_image {
   color: #000000;
 }
 
+main {
+  position: relative;
+  width: auto;
+  background-color: #F6F6F6;
+}
+
 footer {
   position: relative;
   width: auto;
@@ -141,17 +239,19 @@ footer {
   padding: 1.5rem;
   background-color: #353535;
 }
-footer .footer_logo_text {
+
+.footer_logo_text {
   font-family: "Shrikhand", "cursive";
   color: #FFFFFF;
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-footer .footer_list {
+
+.footer_list {
   list-style: none;
 }
-footer .footer_list_link {
+.footer_list_link {
   font-family: Roboto;
   color: #FFFFFF;
   text-decoration: none;
@@ -175,9 +275,9 @@ footer .footer_list_link {
   border-style: none;
   border-radius: 1rem;
   background-color: #FFFFFF;
+  box-shadow: 0.25rem 0.25rem 0.5rem #CCCCCC;
   text-decoration: none;
   color: #000000;
-  box-shadow: 0.25rem 0.25rem 0.5rem #CCCCCC;
 }
 .restaurant_card_image {
   width: 100%;
@@ -227,7 +327,7 @@ footer .footer_list_link {
   font-family: Roboto;
   font-size: 0.9rem;
   font-weight: bold;
-  color: #228a70;
+  color: #2c9c81;
 }
 
 .main_menu {
@@ -262,14 +362,15 @@ footer .footer_list_link {
   background-color: #F6F6F6;
   text-align: center;
 }
-.restaurant_menu .restaurant_title {
+
+.restaurant_title {
   position: relative;
   display: flex;
   justify-content: space-between;
   margin: 0.75rem 0 1.75rem;
   padding-top: 0.5rem;
 }
-.restaurant_menu .restaurant_title .fa-solid {
+.restaurant_title .fa-solid {
   color: transparent;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
@@ -277,38 +378,39 @@ footer .footer_list_link {
   opacity: 0;
   transition: 500ms;
 }
-.restaurant_menu .restaurant_title .fa-solid:active {
+.restaurant_title .fa-solid:active {
   opacity: 1;
 }
-.restaurant_menu .restaurant_menu_list {
+
+.restaurant_menu_list {
   width: 100%;
   margin-bottom: 2.75rem;
   -webkit-animation: appear 2000ms both;
           animation: appear 2000ms both;
 }
-.restaurant_menu .restaurant_menu_list--1 {
+.restaurant_menu_list--1 {
   -webkit-animation-delay: 666.6666666667ms;
           animation-delay: 666.6666666667ms;
 }
-.restaurant_menu .restaurant_menu_list--2 {
+.restaurant_menu_list--2 {
   -webkit-animation-delay: 1333.3333333333ms;
           animation-delay: 1333.3333333333ms;
 }
-.restaurant_menu .restaurant_menu_list--3 {
+.restaurant_menu_list--3 {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
 }
-.restaurant_menu .restaurant_menu_list_title {
+.restaurant_menu_list_title {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #666666;
   text-transform: uppercase;
   text-align: left;
 }
-.restaurant_menu .restaurant_menu_list_title--offbeat {
+.restaurant_menu_list_title--offbeat {
   padding-left: 2rem;
 }
-.restaurant_menu .restaurant_menu_list_title::after {
+.restaurant_menu_list_title::after {
   display: block;
   content: "";
   width: 2.75rem;
@@ -316,23 +418,6 @@ footer .footer_list_link {
   background-color: #99E2D0;
 }
 
-@-webkit-keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 .restaurant_menu_item {
   text-align: left;
   text-overflow: ellipsis;
@@ -364,11 +449,6 @@ footer .footer_list_link {
   transform: translateX(0rem);
   transition: 500ms;
 }
-.restaurant_menu_check .fa-circle-check {
-  color: #FFFFFF;
-  font-size: 1.4rem;
-  transition: 500ms;
-}
 
 .item_btn:active > .restaurant_menu_price {
   transform: translateX(-3.75rem);
@@ -391,20 +471,21 @@ footer .footer_list_link {
   color: #666666;
 }
 
-main {
-  position: relative;
-  width: auto;
-  background-color: #F6F6F6;
+.fa-circle-check {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  transition: 500ms;
 }
 
 .restaurant_location {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   width: auto;
   height: 3.3rem;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #DFDFDF;
+  box-shadow: inset 0 0.25rem 0.25rem #CCCCCC;
 }
 .restaurant_location_text {
   padding-top: 0.25rem;
@@ -502,89 +583,4 @@ main {
   width: 100%;
   height: 68rem;
   margin-bottom: 3rem;
-}
-
-.load {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #DFDFDF;
-  opacity: 1;
-  z-index: 1;
-  -webkit-animation: disappear 50ms 1350ms forwards;
-          animation: disappear 50ms 1350ms forwards;
-}
-.load_image {
-  width: 50%;
-  margin: 1rem;
-}
-.load_forms {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-}
-
-@-webkit-keyframes disappear {
-  0% {
-    opacity: 1;
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 0;
-  }
-}
-
-@keyframes disappear {
-  0% {
-    opacity: 1;
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 0;
-  }
-}
-.load_form {
-  width: 2rem;
-  height: 2rem;
-  margin: 1rem;
-  border-radius: 1rem;
-  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  -webkit-animation: ellipsis 450ms infinite backwards ease-in-out alternate;
-          animation: ellipsis 450ms infinite backwards ease-in-out alternate;
-}
-.load_form--1 {
-  -webkit-animation-delay: 150ms;
-          animation-delay: 150ms;
-}
-.load_form--2 {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-}
-.load_form--3 {
-  -webkit-animation-delay: 450ms;
-          animation-delay: 450ms;
-}
-
-@-webkit-keyframes ellipsis {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes ellipsis {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
 }/*# sourceMappingURL=main.css.map */

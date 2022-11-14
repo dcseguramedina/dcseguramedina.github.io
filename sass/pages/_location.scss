@@ -1,11 +1,11 @@
- .restaurant_location {    
-    display: flex;
-    justify-content: center;
-    align-content: center;
+// Restaurant location section //
+.restaurant_location {    
     width: auto;
     height: 3.3rem;
     padding: 1rem;
+    @include flex-center;  
     background-color: $background-colour-light-gray;
+    @include border-shadow;
 
         &_text {
             padding-top: 0.25rem;
@@ -16,6 +16,7 @@
         }        
 }
 
+// Icons //
 .fa-location-dot {        
     margin-right: 1.2rem;
     font-size: 1rem;

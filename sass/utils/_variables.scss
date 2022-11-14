@@ -1,9 +1,9 @@
-//Main colours
+//Main colours //
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
 
-//Backgrownd colors
+//Backgrownd colors //
 $background-colour-white: #FFFFFF;
 $background-colour-very-light-gray: #F6F6F6;
 $background-colour-light-gray: #DFDFDF;
@@ -12,8 +12,17 @@ $background-colour-dark-gray: #353535;
 $background-image-gradient: linear-gradient(to bottom, $colour-primary,$colour-secondary);
 $background-image-click-btn: linear-gradient(to top left, $colour-primary,$colour-secondary);
 
-//Text colours
+//Text colours //
 $font-text-colour-black: #000000;
 $font-text-colour-gray: #666666;
 $font-text-colour-white: #FFFFFF;
-$font-text-colour-green: #228a70;
+
+// Loader animations //
+$anim-duration-load: 450ms;
+$num-bars-load:3;
+$anim-delay-load: ($anim-duration-load / $num-bars-load);
+
+// Menu animations //
+$anim-duration-menu: 2000ms;
+$num-bars-menu:3;
+$anim-delay-menu: ($anim-duration-menu / $num-bars-menu);

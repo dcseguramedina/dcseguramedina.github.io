@@ -1,0 +1,30 @@
+// Loader animations //
+@keyframes disappear {
+    0% {
+       opacity: 1;
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+   }
+}
+
+@keyframes ellipsis {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+// Menu animations //
+@keyframes appear {
+    0% {
+        transform: scale(0.0);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}

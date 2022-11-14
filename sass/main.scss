@@ -1,17 +1,18 @@
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 @import "./base/base";
+@import "./components/loader";
 @import "./components/buttons";
 @import "./layouts/header";
+@import "./layouts/main";
 @import "./layouts/footer";
 @import "./layouts/cards";
 @import "./layouts/menus";
 @import "./layouts/icons";
-@import "./pages/main";
 @import "./pages/location";
 @import "./pages/availability";
 @import "./pages/tutorial";
 @import "./pages/restaurants";
-@import "./pages/loader";
+
 

@@ -1,29 +1,31 @@
+// The footer is identical on all pages //
 footer {
     position: relative;
     width: auto;
     height: 12.5rem;
     padding: 1.5rem;
     background-color: $background-colour-dark-gray;
+}
 
-        .footer_logo_text {
-            font-family: 'Shrikhand',"cursive";
-            color: $font-text-colour-white; 
-            font-weight: bold;       
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
+.footer_logo_text {
+    font-family: 'Shrikhand',"cursive";
+    color: $font-text-colour-white; 
+    font-weight: bold;       
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
 
-        .footer_list {
-            list-style: none;
-        
-                &_link {
-                    font-family: Roboto;
-                    color: $font-text-colour-white;
-                    text-decoration: none;
-                }
+.footer_list {
+    list-style: none;
+
+        &_link {
+            font-family: Roboto;
+            color: $font-text-colour-white;
+            text-decoration: none;
         }
 }
 
+// Icons //
 .fa-utensils {
     margin-right: 0.75rem ;
     font-size: 1rem;

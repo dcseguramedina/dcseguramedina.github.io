@@ -1,3 +1,4 @@
+// Restaurant tutorial section //
 .site_tutorial {
     width: auto;
     height: 28.5rem;
@@ -13,6 +14,7 @@
             width: 100%;
             height: 80%; 
             
+                // The number comes out of the button on the left side //
                 &_number {
                     position: absolute;
                     top: 1.5rem;
@@ -34,6 +36,7 @@
         }        
 }
 
+// Icons //
 .fa-mobile-screen-button,
 .fa-list-ul,
 .fa-store {
@@ -45,6 +48,7 @@
     color: #808080;
 }
 
+// Effects on hover //
 .item_btn--bigger:hover > .fa-mobile-screen-button,
 .item_btn--bigger:hover > .fa-list-ul,
 .item_btn--bigger:hover > .fa-store {
