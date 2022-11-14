@@ -4,9 +4,7 @@ header {
     width: auto;
     height: 4rem;
     padding: 1rem;
-
-    @include flex-center;    
-    
+    @include flex-center;        
     background-color: $background-colour-very-light-gray;
 }
 

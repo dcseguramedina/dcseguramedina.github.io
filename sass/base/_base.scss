@@ -7,14 +7,14 @@
     }
 
 // Main elements of the web site //
-html, body {
-    max-width: 576px;
-    min-width: 376px;
+html, body {   
+    max-width: 1400px; 
+    min-width: 576px;
     margin: auto;
     font-family: 'Shrikhand', Roboto ;
     color: $font-text-colour-black; 
     font-size: 16px;
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 h1 {

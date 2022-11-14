@@ -57,8 +57,8 @@
 }
 
 html, body {
-  max-width: 576px;
-  min-width: 376px;
+  max-width: 1400px;
+  min-width: 576px;
   margin: auto;
   font-family: "Shrikhand", Roboto;
   color: #000000;
@@ -149,6 +149,7 @@ p {
 }
 
 .click_btn {
+  margin-bottom: 2.5rem;
   padding: 1rem 1.5rem;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   border: none;
@@ -184,6 +185,11 @@ p {
   overflow: hidden;
   box-shadow: 0.25rem 0.25rem 0.5rem #CCCCCC;
 }
+@media screen and (min-width: 992px) {
+  .item_btn {
+    width: 95%;
+  }
+}
 
 .item_btn--bigger {
   height: 4.5rem;
@@ -191,6 +197,11 @@ p {
   border-radius: 1.5rem;
   background-color: #FFFFFF;
   overflow: visible;
+}
+@media screen and (min-width: 992px) {
+  .item_btn--bigger {
+    width: 32%;
+  }
 }
 
 .item_btn--bigger:hover {
@@ -279,6 +290,12 @@ footer {
   text-decoration: none;
   color: #000000;
 }
+@media screen and (min-width: 992px) {
+  .restaurant_card {
+    width: 48%;
+    margin-right: 2rem;
+  }
+}
 .restaurant_card_image {
   width: 100%;
   height: 11rem;
@@ -333,21 +350,53 @@ footer {
 .main_menu {
   position: relative;
   width: auto;
-  height: 88rem;
+  height: 92rem;
   background-color: #F6F6F6;
+}
+@media screen and (min-width: 768px) {
+  .main_menu {
+    height: 102rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main_menu {
+    height: 70rem;
+  }
 }
 
 .main_menu--larger {
-  height: 93rem;
+  height: 97rem;
+}
+@media screen and (min-width: 768px) {
+  .main_menu--larger {
+    height: 107rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main_menu--larger {
+    height: 74rem;
+  }
 }
 
 .restaurant_image {
   width: 100%;
   height: 18rem;
 }
+@media screen and (min-width: 768px) {
+  .restaurant_image {
+    height: 28rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant_image {
+    height: 38rem;
+  }
+}
 .restaurant_image #restaurant_image {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .restaurant_menu {
@@ -361,6 +410,16 @@ footer {
   border-bottom-right-radius: 0;
   background-color: #F6F6F6;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .restaurant_menu {
+    top: 24.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant_menu {
+    top: 34.5rem;
+  }
 }
 
 .restaurant_title {
@@ -380,6 +439,19 @@ footer {
 }
 .restaurant_title .fa-solid:active {
   opacity: 1;
+}
+
+.restaurant_menu_lists {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 992px) {
+  .restaurant_menu_lists {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .restaurant_menu_list {
@@ -502,7 +574,7 @@ footer {
 
 .restaurant_availability {
   width: auto;
-  height: 18.5rem;
+  height: auto;
   padding: 1rem;
   background-color: #F6F6F6;
   text-align: center;
@@ -521,7 +593,7 @@ footer {
 
 .site_tutorial {
   width: auto;
-  height: 28.5rem;
+  height: auto;
   padding: 3rem 1.5rem;
   background-color: #FFFFFF;
 }
@@ -531,7 +603,15 @@ footer {
 .site_tutorial_steps {
   position: relative;
   width: 100%;
-  height: 80%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .site_tutorial_steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .site_tutorial_steps_number {
   position: absolute;
@@ -583,4 +663,11 @@ footer {
   width: 100%;
   height: 68rem;
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .restaurants_cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 35rem;
+  }
 }/*# sourceMappingURL=main.css.map */

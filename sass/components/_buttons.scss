@@ -2,6 +2,7 @@
 
 // This base button is used on the availability section and the menu pages //
 .click_btn {    
+    margin-bottom: 2.5rem;
     padding: 1rem 1.5rem;
     background-image: $background-image-click-btn;
     border: none;
@@ -38,7 +39,12 @@
     background-color: $background-colour-white;           
     cursor: pointer; 
     overflow: hidden;   
-    @include box-shadow; 
+    @include box-shadow;
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        width: 95%;
+    }
+
 } 
 
 // The botton 'Explorer nos restaurants' on the tutorial section (home page) is bigger so it has been adapted respectively //
@@ -48,6 +54,10 @@
     border-radius: 1.5rem;
     background-color: $background-colour-white;  
     overflow: visible; 
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        width: 32%;
+    }
 }
 
 // Button effecst on hover //

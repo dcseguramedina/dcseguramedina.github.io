@@ -26,3 +26,11 @@ $anim-delay-load: ($anim-duration-load / $num-bars-load);
 $anim-duration-menu: 2000ms;
 $num-bars-menu:3;
 $anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
+
+// Media Queries //
+$breakpoints: (
+    mobile: 576px,
+    tablete: 768px,
+    desktop: 992px,
+    large-desktop: 1200px,
+    x-large-desktop: 1400px);

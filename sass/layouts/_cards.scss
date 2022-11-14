@@ -11,6 +11,11 @@
     text-decoration: none;
     color: $font-text-colour-black;   
 
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        width: 48%;
+        margin-right: 2rem;
+    }
+
         // Restaurant image //
         &_image {
             width: 100%;
