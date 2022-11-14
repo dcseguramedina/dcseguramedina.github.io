@@ -13,7 +13,9 @@
 </head>
 
 <body>
+    <!--The header is present on all pages-->
     <header>
+        <!--On the menu pages, the header also contains a back button to the home page-->
         <a class="header_link" href="./accueil.html"><i class="fa-solid fa-arrow-left"></i></a>
         <img class="header_image" src="./images/logo/ohmyfood.png" alt="logo_ohmyfood">
     </header>
@@ -25,11 +27,15 @@
         <div class="restaurant_menu">
             <div class="restaurant_title">
                 <h1>La note enchantée</h1>
+                <!--The "Like" heart-shaped button is present here too and the effects are the same-->
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-heart"></i>
             </div>
-            <section class="restaurant_menu_list">
+            <!--Upon arrival on the menu pages, the dishes appears gradually with a slight time lag (by group)-->
+            <section class="restaurant_menu_list restaurant_menu_list--1">
                 <h2 class="restaurant_menu_list_title">Entrées</h2>
+                <!--In order to add the dishes to the order by clicking on them, a small check mark appears on the right of the dish.
+                This check mark slides from right to left. If the title of the dish is too long, it is trimmed with ellipsis points-->
                 <div class="item_btn">
                     <div class="restaurant_menu_item">
                         <h3>Ravioles de foie gras</h3>
@@ -79,7 +85,7 @@
                     </div>
                 </div>
             </section>
-            <section class="restaurant_menu_list">
+            <section class="restaurant_menu_list restaurant_menu_list--2">
                 <h2 class="restaurant_menu_list_title restaurant_menu_list_title--offbeat">Plats</h2>
                 <div class="item_btn">
                     <div class="restaurant_menu_item">
@@ -118,7 +124,7 @@
                     </div>
                 </div>
             </section>
-            <section class="restaurant_menu_list">
+            <section class="restaurant_menu_list restaurant_menu_list--3">
                 <h2 class="restaurant_menu_list_title">Desserts</h2>
                 <div class="item_btn">
                     <div class="restaurant_menu_item">
@@ -157,10 +163,12 @@
                     </div>
                 </div>
             </section>
+            <!--On hover, the background color of the 'Commander' button lights up slightly. The drop shadow is also more visible-->
             <button class="click_btn click_btn--smaller" type="button">Commander</button>
         </div>        
     </main>
 
+    <!--The footer is present on all pages-->   
     <footer>
         <div class="footer_logo">
             <p class="footer_logo_text">ohmyfood</p>
@@ -169,8 +177,9 @@
             <li><a class="footer_list_link" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
             <li><a class="footer_list_link" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
             <li><a class="footer_list_link" href="#">Mentions légales</a></li>
+             <!--When clicking on "Contact", a referral to an email address is made-->
             <li><a class="footer_list_link" href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
-    </footer>    
+    </footer>     
 </body>
 </html>

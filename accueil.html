@@ -12,7 +12,8 @@
 </head>
 <body>
 
-    <!--A loading spinner will be necessary. It will have to appear for 1 to 3 seconds when you arrive on the home page, cover the entire screen, and use CSS animations-->
+     <!--Loader-->
+    <!--The loader appears for 3 seconds when you arrive on the home page, cover the entire screen, and use CSS animations-->
     <div class="load">
         <img class="load_image" src="./images/logo/ohmyfood.png" alt="logo_ohmyfood">
         <div class="load_forms">
@@ -22,23 +23,28 @@
         </div>
     </div>
 
+     <!--Header-->
+     <!--The header is present on all pages-->
     <header>        
         <img class="header_image" src="./images/logo/ohmyfood.png" alt="logo_ohmyfood">
     </header>
 
+    <!--Main-->
     <main>
-        <!--Display of the location of restaurants. Eventually it will be possible to choose your location to find restaurants close to a certain place-->
+        <!--Restaurant location-->
         <section class="restaurant_location">            
             <i class="fa-solid fa-location-dot"></i>
             <p class="restaurant_location_text">Paris, Belleville</p>
         </section>
-        <!--When hovering, the background color of the main buttons should lighten slightly. The drop shadow will also need to be more visible-->
+        <!--Restaurant availability-->
+        <!--On hover, the background color of the 'Explorer nos restaurants' button lights up slightly. The drop shadow is also more visible-->
         <section class="restaurant_availability">
             <h2 class="restaurant_availability_title">Réservez le menu qui vous convient</h2>
             <p class="restaurant_availability_text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button class="click_btn" type="button">Explorer nos restaurants</button>
         </section>
-    
+        <!--Restaurant tutorial-->
+        <!--Same as before, on hover, the background color of this buttons lights up slightly and the drop shadow is more visible-->
         <section class="site_tutorial">
             <h2 class="site_tutorial_title">Fonctionnement</h2>
             <div class="site_tutorial_steps">
@@ -59,11 +65,10 @@
                 </button>
             </div>
         </section>
-        
+        <!--Restaurants section-->
         <section class="restaurants">
             <h2 class="restaurants_title">Restaurants</h2>
-            <!--Click on the card, the user is redirected to the menu page-->
-            <!--Eventually, visitors will be able to save their favorite menus. For that, a "Like" heart-shaped button is present on the mockup. At the click, it will have to be fill gradually. For this first version, the effect may appear in the Hover over on desktop instead of click-->
+            <!--Clicking on the card, the user is redirected to the menu page-->
             <div class="restaurants_cards">
                 <a class="restaurant_card" href="./menu_la_palette_du_goût.html">
                     <img class="restaurant_card_image" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
@@ -72,7 +77,8 @@
                         <div class="restaurant_card_description_text">
                             <h3>La palette du goût</h3>
                             <h4>Ménilmontant</h4>
-                        </div>                        
+                        </div>  
+                        <!--A "Like" heart-shaped button is present on this version. On click, this button gradually fills up-->                      
                         <div class="restaurant_card_description_icon">
                             <i class="fa-regular fa-heart"></i>
                             <i class="fa-solid fa-heart"></i>
@@ -122,7 +128,8 @@
             </div>
         </section>
     </main>
-    <!--When clicking on "Contact", a referral to an email address is made-->
+
+    <!--The footer is present on all pages-->   
     <footer>
         <div class="footer_logo">
             <p class="footer_logo_text">ohmyfood</p>
@@ -131,6 +138,7 @@
             <li><a class="footer_list_link" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
             <li><a class="footer_list_link" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
             <li><a class="footer_list_link" href="#">Mentions légales</a></li>
+             <!--When clicking on "Contact", a referral to an email address is made-->
             <li><a class="footer_list_link" href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
     </footer>    
