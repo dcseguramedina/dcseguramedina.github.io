@@ -58,7 +58,7 @@
 
 html, body {
   max-width: 1400px;
-  min-width: 576px;
+  min-width: 360px;
   margin: auto;
   font-family: "Shrikhand", Roboto;
   color: #000000;
@@ -332,6 +332,11 @@ footer {
 .restaurant_card_description_icon .fa-solid:active {
   opacity: 1;
 }
+@media screen and (min-width: 992px) {
+  .restaurant_card_description_icon .fa-solid:hover {
+    opacity: 1;
+  }
+}
 
 .restaurant_card_new {
   position: absolute;
@@ -440,6 +445,11 @@ footer {
 .restaurant_title .fa-solid:active {
   opacity: 1;
 }
+@media screen and (min-width: 992px) {
+  .restaurant_title .fa-solid:hover {
+    opacity: 1;
+  }
+}
 
 .restaurant_menu_lists {
   display: flex;
@@ -457,20 +467,20 @@ footer {
 .restaurant_menu_list {
   width: 100%;
   margin-bottom: 2.75rem;
-  -webkit-animation: appear 2000ms both;
-          animation: appear 2000ms both;
+  -webkit-animation: appear 1650ms both;
+          animation: appear 1650ms both;
 }
 .restaurant_menu_list--1 {
-  -webkit-animation-delay: 666.6666666667ms;
-          animation-delay: 666.6666666667ms;
+  -webkit-animation-delay: 183.3333333333ms;
+          animation-delay: 183.3333333333ms;
 }
 .restaurant_menu_list--2 {
-  -webkit-animation-delay: 1333.3333333333ms;
-          animation-delay: 1333.3333333333ms;
+  -webkit-animation-delay: 366.6666666667ms;
+          animation-delay: 366.6666666667ms;
 }
 .restaurant_menu_list--3 {
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+  -webkit-animation-delay: 550ms;
+          animation-delay: 550ms;
 }
 .restaurant_menu_list_title {
   margin-bottom: 1rem;
@@ -491,15 +501,20 @@ footer {
 }
 
 .restaurant_menu_item {
+  width: 90%;
   text-align: left;
+  transition: 500ms;
+}
+.restaurant_menu_item h3, .restaurant_menu_item h4 {
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
-  overflow-x: hidden;
 }
 
 .restaurant_menu_price {
   position: absolute;
   right: 0.75rem;
-  bottom: 0.25rem;
+  bottom: 0.35rem;
   padding: 0.5rem;
   font-weight: bold;
   transform: translateX(0rem);
@@ -522,6 +537,10 @@ footer {
   transition: 500ms;
 }
 
+.item_btn:active > .restaurant_menu_item {
+  width: 70%;
+}
+
 .item_btn:active > .restaurant_menu_price {
   transform: translateX(-3.75rem);
 }
@@ -534,6 +553,20 @@ footer {
   transform: rotate(360deg);
 }
 
+@media screen and (min-width: 992px) {
+  .item_btn:hover > .restaurant_menu_item {
+    width: 70%;
+  }
+  .item_btn:hover > .restaurant_menu_price {
+    transform: translateX(-3.75rem);
+  }
+  .item_btn:hover > .restaurant_menu_check {
+    transform: translateX(-3.75rem);
+  }
+  .item_btn:hover > .restaurant_menu_check .fa-circle-check {
+    transform: rotate(360deg);
+  }
+}
 .fa-heart {
   position: absolute;
   top: 1rem;

@@ -9,7 +9,7 @@
 // Main elements of the web site //
 html, body {   
     max-width: 1400px; 
-    min-width: 576px;
+    min-width: 360px;
     margin: auto;
     font-family: 'Shrikhand', Roboto ;
     color: $font-text-colour-black; 
@@ -46,7 +46,7 @@ h4 {
     color: $font-text-colour-gray;
     font-weight: lighter; 
     font-size: 1rem; 
-    line-height: 1.2; 
+    line-height: 1.2;
 }
 
 p {

@@ -37,7 +37,7 @@
     animation: ellipsis $anim-duration-load infinite backwards ease-in-out alternate;
     @for $i from 1 through $num-bars-load {
         &--#{$i} {
-            animation-delay: $anim-delay-load * $i;
+            animation-delay: ($anim-delay-load * $i);
         } 
     }
 }

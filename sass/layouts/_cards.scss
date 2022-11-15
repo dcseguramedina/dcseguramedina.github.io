@@ -58,6 +58,13 @@
                 &_icon .fa-solid:active {
                     opacity: 1;
                 }
+
+                // Like boutton effects on hover-desktop version //
+                @media screen and (min-width: map-get($breakpoints, desktop)) {
+                    &_icon .fa-solid:hover {
+                        opacity: 1;
+                    }
+                }
         }
 }
 

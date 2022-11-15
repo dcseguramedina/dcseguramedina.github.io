@@ -91,6 +91,13 @@
     & .fa-solid:active {
         opacity: 1;
     }
+
+    // Like boutton effects on hover-desktop version //
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        & .fa-solid:hover {
+            opacity: 1;
+        }
+    }
 }
 
 // Restaurant menu list + animations //
@@ -112,10 +119,10 @@
 .restaurant_menu_list {
     width: 100%;
     margin-bottom: 2.75rem;
-    animation: appear $anim-duration-menu both;
+    animation: appear ($anim-duration-menu*3) both;
     @for $i from 1 through $num-bars-menu {
         &--#{$i} {
-            animation-delay: $anim-delay-menu * $i;
+            animation-delay: ($anim-delay-menu * $i);
         } 
     }  
 
@@ -148,17 +155,22 @@
 
 // Name of the dish //
 .restaurant_menu_item { 
-    text-align: left;  
-    //This is not working
-    text-overflow: ellipsis;
-    overflow-x: hidden;  
+    width: 90%;
+    text-align: left;
+    transition: 500ms;
+    
+    h3, h4 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
 
 // Price of the dish //
 .restaurant_menu_price {
     position: absolute;
     right: 0.75rem; 
-    bottom: 0.25rem;  
+    bottom: 0.35rem;  
     padding: 0.5rem;  
     font-weight: bold; 
     transform: translateX(0rem);   
@@ -183,6 +195,10 @@
 }
 
 // Checkmark effects on click //
+.item_btn:active > .restaurant_menu_item {
+    width: 70%;
+}
+
 .item_btn:active > .restaurant_menu_price {
     transform: translateX(-3.75rem);
 }
@@ -193,4 +209,23 @@
 
 .item_btn:active > .restaurant_menu_check .fa-circle-check {
     transform: rotate(360deg);
+}
+
+// Like boutton effects on hover-desktop version //
+@media screen and (min-width: map-get($breakpoints, desktop)) {
+    .item_btn:hover > .restaurant_menu_item {
+        width: 70%;
+    }
+
+    .item_btn:hover > .restaurant_menu_price {
+        transform: translateX(-3.75rem);
+    }
+    
+    .item_btn:hover > .restaurant_menu_check {
+        transform: translateX(-3.75rem);
+    }
+    
+    .item_btn:hover > .restaurant_menu_check .fa-circle-check {
+        transform: rotate(360deg);
+    }
 }
