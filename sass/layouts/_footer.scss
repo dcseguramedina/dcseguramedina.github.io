@@ -8,9 +8,9 @@ footer {
 }
 
 .footer_logo_text {
-    font-family: 'Shrikhand',"cursive";
-    color: $font-text-colour-white; 
-    font-weight: bold;       
+    font-family: 'Shrikhand', "cursive";
+    color: $font-text-colour-white;
+    font-weight: bold;
     font-size: 1rem;
     margin-bottom: 1rem;
 }
@@ -18,20 +18,20 @@ footer {
 .footer_list {
     list-style: none;
 
-        &_link {
-            font-family: Roboto;
-            color: $font-text-colour-white;
-            text-decoration: none;
-        }
+    &_link {
+        font-family: Roboto;
+        color: $font-text-colour-white;
+        text-decoration: none;
+    }
 }
 
 // Icons //
 .fa-utensils {
-    margin-right: 0.75rem ;
+    margin-right: 0.75rem;
     font-size: 1rem;
 }
 
 .fa-handshake-angle {
-    margin-right: 0.75rem ;
+    margin-right: 0.75rem;
     font-size: 0.70rem;
 }

@@ -5,42 +5,42 @@
     padding: 3rem 1.5rem;
     background-color: $background-colour-white;
 
-        &_title {
-            margin-bottom: 1.5rem;
+    &_title {
+        margin-bottom: 1.5rem;
+    }
+
+    &_steps {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
-        &_steps {
-            position: relative;
-            width: 100%;
-            height: auto; 
-            margin-bottom: 2rem;
+        // The number comes out of the button on the left side //
+        &_number {
+            position: absolute;
+            top: 1.5rem;
+            left: -0.5rem;
+            padding: 0.1rem 0.5rem;
+            border: none;
+            border-radius: 1rem;
+            background-color: $colour-primary;
+            font-size: 1rem;
+            color: $font-text-colour-white;
+        }
 
-            @media screen and (min-width: map-get($breakpoints, desktop)) {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            
-                // The number comes out of the button on the left side //
-                &_number {
-                    position: absolute;
-                    top: 1.5rem;
-                    left: -0.5rem;
-                    padding: 0.1rem 0.5rem;
-                    border: none;
-                    border-radius: 1rem;
-                    background-color: $colour-primary;
-                    font-size: 1rem;
-                    color: $font-text-colour-white;     
-                }
-
-                &_text {
-                    margin-left: 3.5rem;
-                    padding: 0.75rem 0; 
-                    font-size: 1.1rem;
-                    font-weight: bold;  
-                }
-        }        
+        &_text {
+            margin-left: 3.5rem;
+            padding: 0.75rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
 }
 
 // Icons //
@@ -56,9 +56,8 @@
 }
 
 // Effects on hover //
-.item_btn--bigger:hover > .fa-mobile-screen-button,
-.item_btn--bigger:hover > .fa-list-ul,
-.item_btn--bigger:hover > .fa-store {
+.item_btn--bigger:hover>.fa-mobile-screen-button,
+.item_btn--bigger:hover>.fa-list-ul,
+.item_btn--bigger:hover>.fa-store {
     color: $colour-primary;
 }
-

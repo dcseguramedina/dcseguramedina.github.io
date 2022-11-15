@@ -9,8 +9,8 @@ $background-colour-very-light-gray: #F6F6F6;
 $background-colour-light-gray: #DFDFDF;
 $background-colour-dark-gray: #353535;
 
-$background-image-gradient: linear-gradient(to bottom, $colour-primary,$colour-secondary);
-$background-image-click-btn: linear-gradient(to top left, $colour-primary,$colour-secondary);
+$background-image-gradient: linear-gradient(to bottom, $colour-primary, $colour-secondary);
+$background-image-click-btn: linear-gradient(to top left, $colour-primary, $colour-secondary);
 
 //Text colours //
 $font-text-colour-black: #000000;
@@ -19,13 +19,17 @@ $font-text-colour-white: #FFFFFF;
 
 // Loader animations //
 $anim-duration-load: 450ms;
-$num-bars-load:3;
-$anim-delay-load: ($anim-duration-load / $num-bars-load);
+$num-bars-load: 3;
+$anim-delay-load: (
+    $anim-duration-load / $num-bars-load
+);
 
 // Menu animations //
 $anim-duration-menu: 550ms;
-$num-bars-menu:3;
-$anim-delay-menu: ($anim-duration-menu / $num-bars-menu);
+$num-bars-menu: 3;
+$anim-delay-menu: (
+    $anim-duration-menu / $num-bars-menu
+);
 
 // Media Queries //
 $breakpoints: (
@@ -33,4 +37,5 @@ $breakpoints: (
     tablete: 768px,
     desktop: 992px,
     large-desktop: 1200px,
-    x-large-desktop: 1400px);
+    x-large-desktop: 1400px
+);

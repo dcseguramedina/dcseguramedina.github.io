@@ -1,23 +1,23 @@
 // Restaurant location section //
-.restaurant_location {    
+.restaurant_location {
     width: auto;
     height: 3.3rem;
     padding: 1rem;
-    @include flex-center;  
+    @include flex-center;
     background-color: $background-colour-light-gray;
     @include border-shadow;
 
-        &_text {
-            padding-top: 0.25rem;
-            font-family: Roboto;
-            font-size: 1rem;
-            font-weight: bold;
-            line-height: 1;
-        }        
+    &_text {
+        padding-top: 0.25rem;
+        font-family: Roboto;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1;
+    }
 }
 
 // Icons //
-.fa-location-dot {        
+.fa-location-dot {
     margin-right: 1.2rem;
     font-size: 1rem;
 }

@@ -16,8 +16,8 @@
 
 // The last restaurant has a larger menu so the container has been modified respectively //
 .main_menu--larger {
-    height: 97rem;  
-    
+    height: 97rem;
+
     @media screen and (min-width: map-get($breakpoints, tablete)) {
         height: 107rem;
     }
@@ -40,11 +40,11 @@
         height: 38rem;
     }
 
-        #restaurant_image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;  
-        }
+    #restaurant_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 // Restaurant menu //
@@ -57,7 +57,7 @@
     border-radius: 2rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: $background-colour-very-light-gray; 
+    background-color: $background-colour-very-light-gray;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, tablete)) {
@@ -82,7 +82,7 @@
         color: transparent;
         background-image: $background-image-gradient;
         opacity: 0;
-        transition: 500ms; 
+        transition: 500ms;
     }
 
     //Like boutton effects on click //     
@@ -118,46 +118,48 @@
     width: 100%;
     margin-bottom: 2.75rem;
     animation: appear ($anim-duration-menu*3) both;
+
     @for $i from 1 through $num-bars-menu {
         &--#{$i} {
             animation-delay: ($anim-delay-menu * $i);
-        } 
-    }  
-
-        // This title (h2) has been adapted in order to capitalize the text //
-        &_title {
-            margin-bottom: 1rem;
-            font-size: 1rem;        
-            color: $font-text-colour-gray;
-            text-transform: uppercase;
-            text-align: left;  
-
-                // In some menu pages, the 'dishes' title is slightly shifted to the right so the it has been modified respectively //
-                &--offbeat {
-                    padding-left: 2rem;
-                }
         }
-        
-        // A green short line is present under the title in all menu pages //
-        &_title::after {
-            display: block;
-            content: "";
-            width: 2.75rem;
-            height: 0.2rem;
-            background-color: $colour-tertiary;      
-        }                
+    }
+
+    // This title (h2) has been adapted in order to capitalize the text //
+    &_title {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: $font-text-colour-gray;
+        text-transform: uppercase;
+        text-align: left;
+
+        // In some menu pages, the 'dishes' title is slightly shifted to the right so the it has been modified respectively //
+        &--offbeat {
+            padding-left: 2rem;
+        }
+    }
+
+    // A green short line is present under the title in all menu pages //
+    &_title::after {
+        display: block;
+        content: "";
+        width: 2.75rem;
+        height: 0.2rem;
+        background-color: $colour-tertiary;
+    }
 }
 
 // In order to add the dishes to the order by clicking on them, a small check mark appears on the right of the dish // 
 // This check mark slides from right to left. If the title of the dish is too long, it is trimmed with ellipsis points //
 
 // Name of the dish //
-.restaurant_menu_item { 
+.restaurant_menu_item {
     width: 90%;
     text-align: left;
-    transition: 500ms;
-    
-    h3, h4 {
+    transition: 250ms;
+
+    h3,
+    h4 {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -167,63 +169,63 @@
 // Price of the dish //
 .restaurant_menu_price {
     position: absolute;
-    right: 0.75rem; 
-    bottom: 0.35rem;  
-    padding: 0.5rem;  
-    font-weight: bold; 
-    transform: translateX(0rem);   
-    transition: 500ms;    
+    right: 0.75rem;
+    bottom: 0.35rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    transform: translateX(0rem);
+    transition: 250ms;
 }
 
 // Checkmark //
 .restaurant_menu_check {
-    position: absolute; 
+    position: absolute;
     top: 0;
-    right: -3.75rem;  
+    right: -3.75rem;
     width: 3.75rem;
-    height: 100%;  
-    padding: 1.5rem 1rem;   
+    height: 100%;
+    padding: 1.5rem 1rem;
     border: none;
     border-radius: 1rem;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: $colour-tertiary;
-    transform: translateX(0rem);  
-    transition: 500ms;
+    transform: translateX(0rem);
+    transition: 250ms;
 }
 
 // Checkmark effects on click //
-.item_btn:active > .restaurant_menu_item {
+.item_btn:active>.restaurant_menu_item {
     width: 70%;
 }
 
-.item_btn:active > .restaurant_menu_price {
+.item_btn:active>.restaurant_menu_price {
     transform: translateX(-3.75rem);
 }
 
-.item_btn:active > .restaurant_menu_check {
+.item_btn:active>.restaurant_menu_check {
     transform: translateX(-3.75rem);
 }
 
-.item_btn:active > .restaurant_menu_check .fa-circle-check {
+.item_btn:active>.restaurant_menu_check .fa-circle-check {
     transform: rotate(360deg);
 }
 
 // Like boutton effects on hover-desktop version //
 @media screen and (min-width: map-get($breakpoints, desktop)) {
-    .item_btn:hover > .restaurant_menu_item {
+    .item_btn:hover>.restaurant_menu_item {
         width: 70%;
     }
 
-    .item_btn:hover > .restaurant_menu_price {
+    .item_btn:hover>.restaurant_menu_price {
         transform: translateX(-3.75rem);
     }
-    
-    .item_btn:hover > .restaurant_menu_check {
+
+    .item_btn:hover>.restaurant_menu_check {
         transform: translateX(-3.75rem);
     }
-    
-    .item_btn:hover > .restaurant_menu_check .fa-circle-check {
+
+    .item_btn:hover>.restaurant_menu_check .fa-circle-check {
         transform: rotate(360deg);
     }
 }
