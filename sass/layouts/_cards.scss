@@ -47,9 +47,7 @@
                 // Icons - Like boutton //
                 &_icon .fa-solid {
                     color: transparent;
-                    background-image: $background-image-gradient;
-                    background-clip: text;
-                    -webkit-background-clip: text;
+                    background-image: $background-image-gradient;                    
                     opacity: 0;
                     transition: 500ms; 
                 }
