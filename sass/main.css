@@ -324,8 +324,6 @@ footer {
 .restaurant_card_description_icon .fa-solid {
   color: transparent;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
   opacity: 0;
   transition: 500ms;
 }
@@ -437,8 +435,6 @@ footer {
 .restaurant_title .fa-solid {
   color: transparent;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
   opacity: 0;
   transition: 500ms;
 }
@@ -503,9 +499,10 @@ footer {
 .restaurant_menu_item {
   width: 90%;
   text-align: left;
-  transition: 500ms;
+  transition: 250ms;
 }
-.restaurant_menu_item h3, .restaurant_menu_item h4 {
+.restaurant_menu_item h3,
+.restaurant_menu_item h4 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -518,7 +515,7 @@ footer {
   padding: 0.5rem;
   font-weight: bold;
   transform: translateX(0rem);
-  transition: 500ms;
+  transition: 250ms;
 }
 
 .restaurant_menu_check {
@@ -534,7 +531,7 @@ footer {
   border-bottom-left-radius: 0;
   background-color: #99E2D0;
   transform: translateX(0rem);
-  transition: 500ms;
+  transition: 250ms;
 }
 
 .item_btn:active > .restaurant_menu_item {
