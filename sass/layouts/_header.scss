@@ -1,4 +1,4 @@
-// The header is present on all pages //
+// The header is present on all pages
 header {
     position: relative;
     width: auto;
@@ -8,13 +8,13 @@ header {
     background-color: $background-colour-very-light-gray;
 }
 
-// On the home page, it contains the logo of the web site //
+// On the home page, it contains the logo of the web site
 .header_image {
     width: 11rem;
     height: 2rem;
 }
 
-// On the menu pages, it also contains a back button to the home page //
+// On the menu pages, it also contains a back button to the home page
 .header_link {
     position: absolute;
     top: 1.5rem;
@@ -22,7 +22,7 @@ header {
     text-decoration: none;
 }
 
-// Icons //
+// Icons
 .fa-arrow-left {
     font-size: 1.3rem;
     color: $font-text-colour-black;

@@ -1,4 +1,4 @@
-// Menu container //
+// Menu container
 .main_menu {
     position: relative;
     width: auto;
@@ -14,7 +14,7 @@
     }
 }
 
-// The last restaurant has a larger menu so the container has been modified respectively //
+// The last restaurant has a larger menu so the container has been modified respectively
 .main_menu--larger {
     height: 97rem;
 
@@ -27,7 +27,7 @@
     }
 }
 
-// Backgrownd restaurant image //
+// Backgrownd restaurant image
 .restaurant_image {
     width: 100%;
     height: 18rem;
@@ -47,7 +47,7 @@
     }
 }
 
-// Restaurant menu //
+// Restaurant menu
 .restaurant_menu {
     position: absolute;
     top: 14.5rem;
@@ -69,7 +69,7 @@
     }
 }
 
-//Restaurant title //
+//Restaurant title
 .restaurant_title {
     position: relative;
     display: flex;
@@ -77,7 +77,7 @@
     margin: 0.75rem 0 1.75rem;
     padding-top: 0.5rem;
 
-    // Icons - Like boutton //
+    // Icons - Like boutton
     & .fa-solid {
         color: transparent;
         background-image: $background-image-gradient;
@@ -85,12 +85,12 @@
         transition: 500ms;
     }
 
-    //Like boutton effects on click //     
+    //Like boutton effects on click    
     & .fa-solid:active {
         opacity: 1;
     }
 
-    // Like boutton effects on hover-desktop version //
+    // Like boutton effects on hover-desktop version
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         & .fa-solid:hover {
             opacity: 1;
@@ -98,10 +98,10 @@
     }
 }
 
-// Restaurant menu list + animations //
+// Restaurant menu list + animations
 
-// Upon arrival on the menu pages, the dishes appears gradually with a slight time lag (by group) //
-// Restaurant menu list //
+// Upon arrival on the menu pages, the dishes appears gradually with a slight time lag (by group)
+// Restaurant menu list
 .restaurant_menu_lists {
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@
         }
     }
 
-    // This title (h2) has been adapted in order to capitalize the text //
+    // This title (h2) has been adapted in order to capitalize the text
     &_title {
         margin-bottom: 1rem;
         font-size: 1rem;
@@ -133,13 +133,13 @@
         text-transform: uppercase;
         text-align: left;
 
-        // In some menu pages, the 'dishes' title is slightly shifted to the right so the it has been modified respectively //
+        // In some menu pages, the 'dishes' title is slightly shifted to the right so the it has been modified respectively
         &--offbeat {
             padding-left: 2rem;
         }
     }
 
-    // A green short line is present under the title in all menu pages //
+    // A green short line is present under the title in all menu pages
     &_title::after {
         display: block;
         content: "";
@@ -149,10 +149,10 @@
     }
 }
 
-// In order to add the dishes to the order by clicking on them, a small check mark appears on the right of the dish // 
-// This check mark slides from right to left. If the title of the dish is too long, it is trimmed with ellipsis points //
+// In order to add the dishes to the order by clicking on them, a small check mark appears on the right of the dish
+// This check mark slides from right to left. If the title of the dish is too long, it is trimmed with ellipsis points
 
-// Name of the dish //
+// Name of the dish
 .restaurant_menu_item {
     width: 90%;
     text-align: left;
@@ -166,7 +166,7 @@
     }
 }
 
-// Price of the dish //
+// Price of the dish
 .restaurant_menu_price {
     position: absolute;
     right: 0.75rem;
@@ -177,7 +177,7 @@
     transition: 250ms;
 }
 
-// Checkmark //
+// Checkmark
 .restaurant_menu_check {
     position: absolute;
     top: 0;
@@ -194,7 +194,7 @@
     transition: 250ms;
 }
 
-// Checkmark effects on click //
+// Checkmark effects on click
 .item_btn:active>.restaurant_menu_item {
     width: 70%;
 }
@@ -211,7 +211,7 @@
     transform: rotate(360deg);
 }
 
-// Like boutton effects on hover-desktop version //
+// Like boutton effects on hover-desktop version
 @media screen and (min-width: map-get($breakpoints, desktop)) {
     .item_btn:hover>.restaurant_menu_item {
         width: 70%;

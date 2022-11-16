@@ -1,4 +1,4 @@
-// Shadows //
+// Shadows
 @mixin border-shadow {
     box-shadow: inset 0 0.25rem 0.25rem #CCCCCC;
 }
@@ -11,7 +11,7 @@
     box-shadow: 0.25rem 0.25rem 0.5rem #999999; 
 }
 
-// Flexbox //
+// Flexbox
 @mixin flex-center {
     display: flex;
     justify-content: center;

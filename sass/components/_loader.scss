@@ -1,8 +1,7 @@
+// The loader appears for 3 seconds when you arrive on the home page
+// It covers the entire screen and use CSS animations
 
-// The loader appears for 3 seconds when you arrive on the home page //
-// It covers the entire screen and use CSS animations //
-
-// Loader backgrownd + animation //
+// Loader backgrownd + animation
 .load {
     position: fixed;
     inset: 0;
@@ -12,13 +11,13 @@
     opacity: 1;    
     animation: disappear 50ms ($anim-duration-load*3) forwards;
 
-        // Logo //
+        // Logo
         &_image {
             width: 50%;
             margin: 1rem;
         }
 
-        // Three points - elipsis //
+        // Three points - elipsis
         &_forms {
             display: flex; 
             justify-content: center;
@@ -27,7 +26,7 @@
         }        
 }
 
-// Elipsis animation //
+// Elipsis animation
 .load_form { 
     width: 2rem;
     height: 2rem;
