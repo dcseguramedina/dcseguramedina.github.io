@@ -5,24 +5,42 @@ footer {
     height: 12.5rem;
     padding: 1.5rem;
     background-color: $background-colour-dark-gray;
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        padding: 3rem;
+    }
 }
 
 .footer_logo_text {
+    margin-bottom: 1rem;
     font-family: 'Shrikhand', "cursive";
     color: $font-text-colour-white;
     font-weight: bold;
     font-size: 1rem;
-    margin-bottom: 1rem;
+
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        text-align: center;
+    }
 }
 
 .footer_list {
     list-style: none;
 
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
     &_link {
         font-family: Roboto;
         color: $font-text-colour-white;
         text-decoration: none;
-    }
+
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            padding-right: 4rem;
+        }
+    }    
 }
 
 // Icons

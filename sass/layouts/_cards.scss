@@ -54,16 +54,9 @@
             transition: 500ms;
         }
 
-        // Like boutton effects on click
-        &_icon .fa-solid:active {
+        // Like boutton effects on hover
+        &_icon .fa-solid:hover {
             opacity: 1;
-        }
-
-        // Like boutton effects on hover-desktop version
-        @media screen and (min-width: map-get($breakpoints, desktop)) {
-            &_icon .fa-solid:hover {
-                opacity: 1;
-            }
         }
     }
 }

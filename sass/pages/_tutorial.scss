@@ -7,6 +7,10 @@
 
     &_title {
         margin-bottom: 1.5rem;
+
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            text-align: center;
+        }
     }
 
     &_steps {

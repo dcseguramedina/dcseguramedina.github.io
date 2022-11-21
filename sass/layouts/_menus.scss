@@ -87,16 +87,9 @@
         transition: 500ms;
     }
 
-    //Like boutton effects on click    
-    & .fa-solid:active {
+    //Like boutton effects on hover   
+    & .fa-solid:hover {
         opacity: 1;
-    }
-
-    // Like boutton effects on hover-desktop version
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
-        & .fa-solid:hover {
-            opacity: 1;
-        }
     }
 }
 
@@ -197,38 +190,19 @@
     transition: 250ms;
 }
 
-// Checkmark effects on click
-.item_btn:active>.restaurant_menu_item {
+// Checkmark effects on hover
+.item_btn:hover >.restaurant_menu_item {
     width: 70%;
 }
 
-.item_btn:active>.restaurant_menu_price {
+.item_btn:hover >.restaurant_menu_price {
     transform: translateX(-3.75rem);
 }
 
-.item_btn:active>.restaurant_menu_check {
+.item_btn:hover >.restaurant_menu_check {
     transform: translateX(-3.75rem);
 }
 
-.item_btn:active>.restaurant_menu_check .fa-circle-check {
+.item_btn:hover >.restaurant_menu_check .fa-circle-check {
     transform: rotate(360deg);
-}
-
-// Like boutton effects on hover-desktop version
-@media screen and (min-width: map-get($breakpoints, desktop)) {
-    .item_btn:hover>.restaurant_menu_item {
-        width: 70%;
-    }
-
-    .item_btn:hover>.restaurant_menu_price {
-        transform: translateX(-3.75rem);
-    }
-
-    .item_btn:hover>.restaurant_menu_check {
-        transform: translateX(-3.75rem);
-    }
-
-    .item_btn:hover>.restaurant_menu_check .fa-circle-check {
-        transform: rotate(360deg);
-    }
 }
