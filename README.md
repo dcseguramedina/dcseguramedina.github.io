@@ -3,6 +3,11 @@
 "ohmyfood", projet 3 du parcours "Développeur web" d'Openclassroom, a pour objectif le développement un site 100% mobile qui répertorie les menus de restaurants gastronomiques tout en dynamisant le contenu avec des animations CSS.
 
 ## Technologies
+- HTML5
+- CSS3
+- SASS
+
+## Spécifications techniques
 
 - Le développement devra se faire en CSS, sans JavaScript 
 - Aucun code CSS ne devra être appliqué via un attribut style dans une balise HTML
